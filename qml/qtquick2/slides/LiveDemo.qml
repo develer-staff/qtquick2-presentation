@@ -40,6 +40,17 @@ Image {
 }
 "
 
+        state: "offscreen"
+
+        states: State {
+            name: "offscreen"
+            PropertyChanges { target:  textEdit; anchors.leftMargin: 0; opacity: 0; readOnly: true }
+        }
+
+        transitions: Transition {
+            NumberAnimation { target: textEdit; properties: "anchors.leftMargin, opacity"; duration: 200 }
+        }
+
     }
 
     Rectangle {
@@ -92,6 +103,7 @@ Image {
         anchors.bottomMargin: 90
         width: 400
         color: "whitesmoke"
+        state: "offscreen"
 
         MouseArea {
             anchors.fill: parent
@@ -105,5 +117,19 @@ Image {
                 }
             }
         }
+
+        states: State {
+            name: "offscreen"
+            PropertyChanges { target: testArea; anchors.rightMargin: 0; opacity: 0 }
+        }
+
+        transitions: Transition {
+            NumberAnimation { target: testArea; properties: "anchors.rightMargin, opacity"; duration: 200 }
+        }
+    }
+
+    onStateChanged: {
+        testArea.state = state
+        textEdit.state = state
     }
 }

@@ -87,7 +87,6 @@ Item {
         Item {
             id: pageContainer
             Component {
-                id: slide1
                 Intro {
                 }
             }
@@ -245,7 +244,7 @@ Item {
                             showDot: false
                         }
                         ListElement {
-                            text: "Il linguaggio dichiarativo, chiamato Qml ed estensione di JavaScript."
+                            text: "Il linguaggio dichiarativo, chiamato Qml ed estensione di Javascript."
                             indentLevel: 1
                             showDot: true
                         }
@@ -259,11 +258,37 @@ Item {
                             indentLevel: 1
                             showDot: true
                         }
+                    }
+                }
+            }
+
+            Component {
+                TextSlide {
+                    title: "Qt Quick"
+
+                    model: ListModel {
+                        ListElement {
+                            text: "Qt Quick velocizza la realizzazione di GUI ed è quindi molto indicato per il fast prototyping di applicazioni:"
+                            indentLevel: 0
+                            showDot: true
+                        }
 
                         ListElement {
-                            text: "Qt Quick velocizza la realizzazione di GUI ed è quindi molto indicato per il fast prototyping di applicazioni."
+                            text: "La sua natura dichiarativa (come HTML e CSS) rende il linguaggio più familiare ai non programmatori (designer in primis)"
+                            indentLevel: 1
+                            showDot: true
+                        }
+
+                        ListElement {
+                            text: "Alcune sue caratteristiche (come i property bindings e la network transparency) rendono la logica dell'applicazione più lineare e semplice."
+                            indentLevel: 1
+                            showDot: true
+                        }
+
+                        ListElement {
+                            text: "E' realizzato \“sopra\” le Qt in modo da sfruttarne i pregi ed ereditarne le funzionalità (es: accelerazione hardware, internazionalizzazione, risorse, ecc..)."
                             indentLevel: 0
-                            showDot: false
+                            showDot: true
                         }
                     }
                 }
@@ -276,21 +301,69 @@ Item {
 
             Component {
                 TextSlide {
-                    title: "Qt Quick facilities"
+                    title: "Qt Quick e l'embedded"
 
                     model: ListModel {
                         ListElement {
-                            text: "Integrazione con database Sqlite"
+                            text: "Qt Quick è stato originariamente ideato per l'embedded, per questo alcune sue caratteristiche si sposano molto bene con questo mondo:"
+                            indentLevel: 0
+                            showDot: false
+                        }
+
+                        ListElement {
+                            text: "Sfruttando l'accelerazione hardware messa a disposizione da OpenGL, Qt Quick è in grado di girare anche su piattaforme \"modeste\" con buoni risultati."
+                            indentLevel: 1
+                            showDot: true
+                        }
+
+                        ListElement {
+                            text: "Pur essendo basato su Javascript (interpretato), tutti egli effetti e animazioni sono realizzati direttamente in C++ (no overhead)."
+                            indentLevel: 1
+                            showDot: true
+                        }
+
+                        ListElement {
+                            text: "In aggiunta, l'integrazione fra Qml e Qt/C++ è molto alta, ed è quindi facile scrivere parti della logica applicativa in C++ quando le prestazioni lo richiedano."
+                            indentLevel: 2
+                            showDot: true
+                        }
+                    }
+                }
+            }
+
+
+            Component {
+                TextSlide {
+                    title: "Qt Quick: i (principali) moduli"
+
+                    model: ListModel {
+                        ListElement {
+                            text: "Quick / Qml"
                             indentLevel: 0
                             showDot: true
                         }
                         ListElement {
-                            text: "WebKit e funzionalità multimediali avanzate"
+                            text: "Particles / Graphical Effects"
                             indentLevel: 0
                             showDot: true
                         }
                         ListElement {
-                            text: "Alta integrazione con il mondo Qt"
+                            text: "Local Storage / FolderListModel"
+                            indentLevel: 0
+                            showDot: true
+                        }
+                        ListElement {
+                            text: "Multimedia"
+                            indentLevel: 0
+                            showDot: true
+                        }
+                        ListElement {
+                            text: "Controls / Layouts"
+                            indentLevel: 0
+                            showDot: true
+                        }
+                        ListElement {
+                            text: "Sensors"
                             indentLevel: 0
                             showDot: true
                         }
@@ -379,11 +452,7 @@ Item {
                     title: "Qt Quick controls"
                 }
             }
-
         }
-
-
-
 
         delegate: StackViewDelegate {
             function transitionFinished(properties) {
