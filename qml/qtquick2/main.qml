@@ -35,8 +35,6 @@ Item {
                     id: loader
                     anchors.fill: parent
                     onLoaded: {
-                        item.state = "offscreen"
-
                         if (item.totalPages !== undefined)
                             item.totalPages = stackView.pages.length
                     }
