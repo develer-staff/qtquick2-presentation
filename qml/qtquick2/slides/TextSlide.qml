@@ -33,7 +33,7 @@ BaseSlide {
         delegate: Item {
             id: delegateItem
             height: delegateText.height
-            width: childrenRect.width
+            width: listView.width
             state: "hidden"
             property bool showDot: model.showDot !== undefined ? model.showDot : true
             property bool indentLevel: model.indentLevel !== undefined ? model.indentLevel : 0
@@ -55,11 +55,11 @@ BaseSlide {
                 id: delegateText
                 font.pointSize: 18
                 text: model.text
-                width: listView.width
                 wrapMode: Text.WordWrap
                 color: slide.textColor
                 anchors.left: delegateItem.showDot ? delegateDot.right : parent.left
                 anchors.leftMargin: 10 + (delegateItem.showDot ? 0 : delegateItem.indentLevel * delegateItem.indent)
+                anchors.right: parent.right
                 anchors.top: parent.top
             }
 
