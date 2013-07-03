@@ -9,18 +9,34 @@ Item {
     width: 1024 // Screen.width
     height: 768 // Screen.height
 
+    focus: true
+
+    Keys.onPressed: {
+        if (event.key == Qt.Key_Space)
+            stackView.next()
+        else if (event.key == Qt.Key_Escape || event.key == Qt.Key_Backspace)
+            stackView.prev()
+        else
+            return
+
+        event.accepted = true
+    }
+
     StackView {
         id: stackView
         property var pages
         property int startingIndex: 0
+        property int currentIndex: 0
 
         anchors.fill: parent
 
-        function next(index) {
-            push({item: pageComponent, properties: {component: pages[index + 1]}})
+        function next() {
+            currentIndex += 1
+            push({item: pageComponent, properties: {component: pages[currentIndex]}})
         }
 
-        function prev(index) {
+        function prev() {
+            currentIndex -= 1
             pop()
         }
 
@@ -42,8 +58,8 @@ Item {
 
                 Connections {
                     target: loader.item
-                    onGotoNextSlide: stackView.next(page.index)
-                    onGotoPrevSlide: stackView.prev(page.index)
+                    onGotoNextSlide: stackView.next()
+                    onGotoPrevSlide: stackView.prev()
                 }
 
                 Stack.onStatusChanged: {
@@ -65,7 +81,7 @@ Item {
             stackView.push({item: pageComponent, properties: {component: pages[0]}})
 
             for (var i = 0; i < startingIndex; i++)
-                next(i)
+                next()
         }
 
         Item {
