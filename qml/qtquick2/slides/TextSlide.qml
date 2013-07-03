@@ -36,7 +36,7 @@ BaseSlide {
             width: listView.width
             state: "hidden"
             property bool showDot: model.showDot !== undefined ? model.showDot : true
-            property bool indentLevel: model.indentLevel !== undefined ? model.indentLevel : 0
+            property int indentLevel: model.indentLevel !== undefined ? model.indentLevel : 0
             property int indent: 30
 
             Rectangle {
