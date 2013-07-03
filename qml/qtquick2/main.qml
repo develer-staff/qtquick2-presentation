@@ -16,6 +16,10 @@ Item {
             stackView.next()
         else if (event.key == Qt.Key_Escape || event.key == Qt.Key_Backspace)
             stackView.prev()
+        else if (event.key == Qt.Key_Enter || event.key == Qt.Key_Return) {
+            if (stackView.currentItem.item.advance)
+                stackView.currentItem.item.advance()
+        }
         else
             return
 
@@ -32,7 +36,7 @@ Item {
 
         function next() {
             currentIndex += 1
-            push({item: pageComponent, properties: {component: pages[currentIndex]}})
+            push({item: pageComponent, properties: {sourceComponent: pages[currentIndex]}})
         }
 
         function prev() {
@@ -42,43 +46,39 @@ Item {
 
         Component {
             id: pageComponent
-            Item {
+            Loader {
                 id: page
                 property int index: Stack.index
-                property alias component: loader.sourceComponent
 
-                Loader {
-                    id: loader
-                    anchors.fill: parent
-                    onLoaded: {
-                        if (item.totalPages !== undefined)
-                            item.totalPages = stackView.pages.length
-                    }
+                onLoaded: {
+                    if (item.totalPages !== undefined)
+                        item.totalPages = stackView.pages.length
                 }
 
                 Connections {
-                    target: loader.item
+                    target: item
                     onGotoNextSlide: stackView.next()
                     onGotoPrevSlide: stackView.prev()
                 }
 
                 Stack.onStatusChanged: {
-                    if (Stack.status == Stack.Activating && loader.item) {
-                        if (loader.item.numPage !== undefined)
-                            loader.item.numPage = Stack.index + 1
+                    if (Stack.status == Stack.Activating && item) {
+                        if (item.numPage !== undefined)
+                            item.numPage = Stack.index + 1
 
-                        if (loader.item.totalPages !== undefined)
-                            loader.item.totalPages = stackView.pages.length
+                        if (item.totalPages !== undefined)
+                            item.totalPages = stackView.pages.length
 
-                        loader.item.state = ""
+                        item.state = ""
                     }
                 }
+
             }
         }
 
         Component.onCompleted: {
             pages = pageContainer.data
-            stackView.push({item: pageComponent, properties: {component: pages[0]}})
+            stackView.push({item: pageComponent, properties: {sourceComponent: pages[0]}})
 
             for (var i = 0; i < startingIndex; i++)
                 next()

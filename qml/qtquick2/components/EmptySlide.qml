@@ -15,6 +15,8 @@ Rectangle {
     property color alternateBgColor: "#ECECEC"
 
     state: "offscreen"
+
+
     QtObject {
         id: privateProps
         property int exitDirection: noUserRequest
