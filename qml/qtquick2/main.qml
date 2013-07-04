@@ -1,6 +1,7 @@
 import QtQuick 2.1
 import QtQuick.Controls 1.0
 import QtQuick.Window 2.0
+import QtGraphicalEffects 1.0
 
 import "slides"
 import "components"
@@ -428,20 +429,22 @@ Item {
 
                     model: ListModel {
                         ListElement {
-                            text: "Quick / Qml"
+                            text: "QtQuick / QtQml"
                             indentLevel: 0
                             showDot: true
                         }
                         ListElement {
-                            text: "Particles / Graphical Effects"
+                            text: "LocalStorage / XmlListModel / FolderListModel*"
                             indentLevel: 0
                             showDot: true
                         }
+
                         ListElement {
-                            text: "Local Storage / FolderListModel"
+                            text: "Particles / GraphicalEffects"
                             indentLevel: 0
                             showDot: true
                         }
+
                         ListElement {
                             text: "Multimedia"
                             indentLevel: 0
@@ -463,7 +466,7 @@ Item {
 
             Component {
                 TextSlide {
-                    title: "Quick / Qml"
+                    title: "QtQuick / QtQml"
 
                     model: ListModel {
                         ListElement {
@@ -495,12 +498,120 @@ Item {
                             indentLevel: 1
                             showDot: true
                         }
+                    }
+                }
+            }
+
+            Component {
+                TextSlide {
+                    title: "QtQuick / QtQml"
+
+                    model: ListModel {
+                        ListElement {
+                            text: "Il modulo QtQuick contiene anche:"
+                            indentLevel: 0
+                            showDot: false
+                        }
+
+                        ListElement {
+                            text: "Un canvas per il disegno 2D simile al canvas fornito da HTML5"
+                            indentLevel: 1
+                            showDot: true
+                        }
+
+                        ListElement {
+                            text: "Elementi logici per l'utilizzo di GLSL shaders (per effetti grafici) e per l'esecuzione di codice in un worker thread"
+                            indentLevel: 1
+                            showDot: true
+                        }
 
                         ListElement {
                             text: "Il modulo QtQml contiene elementi logici di utilità e modelli Qml utilizzabili con le viste del modulo QtQuick."
                             indentLevel: 0
+                            showDot: false
+                        }
+
+                        ListElement {
+                            text: "La parte C++ del modulo è il runtime di Qml stesso e permette anche l'utilizzo di oggetti C++ come modelli per le viste di QtQuick."
+                            indentLevel: 1
                             showDot: true
                         }
+                    }
+                }
+            }
+
+            Component {
+                TextSlide {
+                    title: "LocalStorage / XmlListModel / FolderListModel*"
+                    model: ListModel {
+                        ListElement {
+                            text: "LocalStorage offre un facile accesso ad un database SQLite per la memorizzazione di informazioni persistenti direttamente da Qml."
+                            indentLevel: 0
+                            showDot: true
+                        }
+
+                        ListElement {
+                            text: "XmlListModel è un modulo che permette di utilizzare il contenuto di un file xml come modello, utilizzando query XPath per l'estrazione delle role del modello."
+                            indentLevel: 0
+                            showDot: true
+                        }
+
+                        ListElement {
+                            text: "FolderListModel* permette di utilizzare il contenuto di una directory come modello."
+                            indentLevel: 0
+                            showDot: true
+                        }
+                    }
+                }
+            }
+
+            Component {
+                TextSlide {
+                    title: "Particles / GraphicalEffects"
+
+                    model: ListModel {
+                        ListElement {
+                            text: "Il modulo Particles implementa completo sistema particellare, indispensabile per la realizzazione di videogiochi ma utile anche per la realizzazione di effetti complessi come l'effetto nebbia."
+                            indentLevel: 0
+                            showDot: true
+                        }
+
+                        ListElement {
+                            text: "Il modulo GraphicalEffects racchiude invece al suo interno numerosi effetti pronti all'uso e realizzati tramite gli shaders (ad esempio il blur)."
+                            indentLevel: 0
+                            showDot: true
+                        }
+                    }
+                }
+            }
+
+            Component {
+                TextSlide {
+                    title: "Multimedia"
+                    model: ListModel {
+                        ListElement {
+                            text: "Il modulo Multimedia, appoggiandosi a backend specifici per i vari sistemi operativi supportati da Qt, integra al suo interno numerose funzionalità multimediali:"
+                            indentLevel: 0
+                            showDot: false
+                        }
+
+                        ListElement {
+                            text: "riproduzione di audio e video"
+                            indentLevel: 1
+                            showDot: true
+                        }
+
+                        ListElement {
+                            text: "registrazione di video"
+                            indentLevel: 1
+                            showDot: true
+                        }
+                        ListElement {
+                            text: "funzionalità radio"
+                            indentLevel: 1
+                            showDot: true
+                        }
+
                     }
                 }
             }
@@ -511,22 +622,49 @@ Item {
             }
 
             Component {
-                BaseSlide {
-                    title: "Qt Quick: effetti grafici"
+                TextSlide {
+                    id: slide
+                    title: "Controls"
+                    model: ListModel {
+                        ListElement {
+                            text: "Poiché QtQuick è stato ideato per embedded, avere un set di controlli standard non era molto importante."
+                            indentLevel: 0
+                            showDot: false
+                        }
+                        ListElement {
+                            text: "Le cose sono cambiate quando si è visto che QtQuick poteva essere utile anche per Desktop."
+                            indentLevel: 1
+                            showDot: true
+                        }
+                    }
+
+                    Row {
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        anchors.bottom: slide._bottomRectItem.top
+                        anchors.bottomMargin: 10
+                        spacing: 10
+                        Image {
+                            source: "images/DesktopComponentsMac1.png"
+                            width: 410
+                            fillMode: Image.PreserveAspectFit
+                        }
+                        Image {
+                            source: "images/DesktopComponentsWin.png"
+                            width: 410
+                            fillMode: Image.PreserveAspectFit
+                        }
+                    }
                 }
+
+
             }
 
             Component {
                 BaseSlide {
-                    title: "Qt Quick: effetti grafici"
+                    title: "Layout"
                 }
             }
 
-            Component {
-                BaseSlide {
-                    title: "Qt Quick controls"
-                }
-            }
         }
 
         delegate: StackViewDelegate {
