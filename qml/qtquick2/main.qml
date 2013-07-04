@@ -12,9 +12,9 @@ Item {
     focus: true
 
     Keys.onPressed: {
-        if (event.key == Qt.Key_Space)
+        if (event.key == Qt.Key_Space || event.key == Qt.Key_Right)
             stackView.next()
-        else if (event.key == Qt.Key_Escape || event.key == Qt.Key_Backspace)
+        else if (event.key == Qt.Key_Escape || event.key == Qt.Key_Backspace || event.key == Qt.Key_Left)
             stackView.prev()
         else if (event.key == Qt.Key_Enter || event.key == Qt.Key_Return) {
             if (stackView.currentItem.item.advance)
@@ -235,6 +235,38 @@ Item {
 
             Component {
                 TextSlide {
+                    title: "Limitazioni di Qt"
+                    model: ListModel {
+                        ListElement {
+                            text: "Quanto codice serve per...?"
+                            indentLevel: 0
+                            showDot: false
+                        }
+
+                        ListElement {
+                            text: "Modificare la posizione di alcuni elementi"
+                            indentLevel: 1
+                            showDot: true
+                        }
+
+                        ListElement {
+                            text: "Animare gli elementi della gui o integrare transizioni fra pagine"
+                            indentLevel: 1
+                            showDot: true
+                        }
+
+                        ListElement {
+                            text: "Cambiare l'aspetto di una o più finestre a seconda di uno stato logico"
+                            indentLevel: 1
+                            showDot: true
+                        }
+                    }
+                }
+            }
+
+
+            Component {
+                TextSlide {
                     title: "Qt Quick"
 
                     model: ListModel {
@@ -331,6 +363,64 @@ Item {
                 }
             }
 
+            Component {
+                BaseSlide {
+                    id: slide
+                    title: "Qt Quick v.2"
+
+                    Text {
+                        id: text
+                        font.pointSize: 18
+                        text: "Con Qt5/Qt Quick2 è stato riscritto buona parte dello stack grafico per ottimizzare le prestazioni e sfruttare appieno l'accelerazione hardware."
+                        wrapMode: Text.WordWrap
+                        color: slide.textColor
+                        anchors.top: slide._topRectItem.bottom
+                        anchors.topMargin: 180
+                        anchors.left: parent.left
+                        anchors.leftMargin: 100
+                        anchors.right: parent.right
+                        anchors.rightMargin: 100
+                        z: 1
+                    }
+
+                    Image {
+                        anchors.bottom: slide._bottomRectItem.top
+                        anchors.bottomMargin: -40
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        source: "images/v1_vs_v2.png"
+                        scale: .8
+                    }
+                }
+            }
+
+            Component {
+                BaseSlide {
+                    id: slide
+                    title: "Qt Quick v.2"
+
+                    Text {
+                        id: text
+                        font.pointSize: 18
+                        text: "Grazie al lavoro di riscrittura dello stack grafico e all'adozione di un engine Javascript (attualmente, V8) più efficiente le prestazioni in alcuni casi risultano più che raddoppiate!"
+                        wrapMode: Text.WordWrap
+                        color: slide.textColor
+                        anchors.top: slide._topRectItem.bottom
+                        anchors.topMargin: 180
+                        anchors.left: parent.left
+                        anchors.leftMargin: 100
+                        anchors.right: parent.right
+                        anchors.rightMargin: 100
+                        z: 1
+                    }
+
+                    Image {
+                        anchors.top: text.bottom
+                        anchors.topMargin: 50
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        source: "images/benchmarks.png"
+                    }
+                }
+            }
 
             Component {
                 TextSlide {
@@ -372,60 +462,45 @@ Item {
             }
 
             Component {
-                BaseSlide {
-                    id: slide
-                    title: "Qt Quick v.2"
+                TextSlide {
+                    title: "Quick / Qml"
 
-                    Text {
-                        id: text
-                        font.pointSize: 18
-                        text: "Con Qt5/Qt Quick2 è stato riscritto buona parte dello stack grafico per ottimizzare le prestazioni e sfruttare appieno l'accelerazione hardware."
-                        wrapMode: Text.WordWrap
-                        color: slide.textColor
-                        anchors.top: slide._topRectItem.bottom
-                        anchors.topMargin: 180
-                        anchors.left: parent.left
-                        anchors.leftMargin: 100
-                        anchors.right: parent.right
-                        anchors.rightMargin: 100
-                        z: 1
-                    }
+                    model: ListModel {
+                        ListElement {
+                            text: "Il modulo QtQuick è il modulo \"base\", contenente gli elementi necessari per la costruzione di ogni interfaccia grafica:"
+                            indentLevel: 0
+                            showDot: false
+                        }
 
-                    Image {
-                        anchors.bottom: slide._bottomRectItem.top
-                        anchors.bottomMargin: -40
-                        anchors.horizontalCenter: parent.horizontalCenter
-                        source: "images/v1_vs_v2.png"
-                        scale: .8
-                    }
-                }
-            }
+                        ListElement {
+                            text: "Elementi visuali molto semplici, ad esempio rettangoli, immagini e testo"
+                            indentLevel: 1
+                            showDot: true
+                        }
 
-            Component {
-                BaseSlide {
-                    id: slide
-                    title: "Qt Quick v.2"
+                        ListElement {
+                            text: "Elementi logici per gestire l'input dell'utente, come mousearea, drag&drop e campi per l'input di testo"
+                            indentLevel: 1
+                            showDot: true
+                        }
 
-                    Text {
-                        id: text
-                        font.pointSize: 18
-                        text: "Grazie al lavoro di riscrittura dello stack grafico e all'adozione di un engine Javascript più efficiente le prestazioni in alcuni casi risultano più che raddoppiate!"
-                        wrapMode: Text.WordWrap
-                        color: slide.textColor
-                        anchors.top: slide._topRectItem.bottom
-                        anchors.topMargin: 180
-                        anchors.left: parent.left
-                        anchors.leftMargin: 100
-                        anchors.right: parent.right
-                        anchors.rightMargin: 100
-                        z: 1
-                    }
+                        ListElement {
+                            text: "Viste ed elementi logici utilizzabili per il posizionamento, come liste, griglie e path"
+                            indentLevel: 1
+                            showDot: true
+                        }
 
-                    Image {
-                        anchors.top: text.bottom
-                        anchors.topMargin: 50
-                        anchors.horizontalCenter: parent.horizontalCenter
-                        source: "images/benchmarks.png"
+                        ListElement {
+                            text: "Animazioni e transizioni fra stati"
+                            indentLevel: 1
+                            showDot: true
+                        }
+
+                        ListElement {
+                            text: "Il modulo QtQml contiene elementi logici di utilità e modelli Qml utilizzabili con le viste del modulo QtQuick."
+                            indentLevel: 0
+                            showDot: true
+                        }
                     }
                 }
             }
