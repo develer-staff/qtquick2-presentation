@@ -1,4 +1,5 @@
 import QtQuick 2.1
+import QtWebKit 3.0
 
 import "slides"
 import "components"
@@ -627,6 +628,29 @@ Item {
                     text: "Sensore di rotazione"
                     indentLevel: 1
                     showDot: true
+                }
+            }
+        }
+    }
+
+    Component {
+        BaseSlide {
+            id: slide
+            title: "Webkit"
+
+            Rectangle {
+                width: 650
+                height: 450
+                clip: true
+                anchors.top: slide._titleItem.bottom
+                anchors.topMargin: 30
+                anchors.horizontalCenter: parent.horizontalCenter
+                border.width: 1
+                border.color: "grey"
+
+                WebView {
+                    anchors.fill: parent
+                    url: "http://www.qt-project.org"
                 }
             }
         }

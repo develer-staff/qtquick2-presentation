@@ -10,8 +10,6 @@ BaseSlide {
     id: slide
     title: "Qt Quick: funzionalità multimediali"
 
-
-
     Rectangle {
         id: videoContainer
         property var effectObject: null
@@ -19,7 +17,6 @@ BaseSlide {
 
         width: 650
         height: 450
-        radius: 10
         color: "black"
         state: "offscreen"
 
