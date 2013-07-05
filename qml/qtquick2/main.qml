@@ -7,19 +7,32 @@ import "slides"
 import "components"
 
 Item {
+    id: root
     width: 1024 // Screen.width
     height: 768 // Screen.height
 
     focus: true
 
+    function userRequestedNextSlide() {
+        stackView.currentItem.item.userRequestedNextSlide()
+    }
+
+    function userRequestedPrevSlide() {
+        stackView.currentItem.item.userRequestedPrevSlide()
+    }
+
+    MouseArea {
+        anchors.fill: parent
+        onClicked: root.userRequestedNextSlide()
+        onPressAndHold: root.userRequestedPrevSlide()
+    }
+
     Keys.onPressed: {
-        if (event.key == Qt.Key_Space || event.key == Qt.Key_Right)
-            stackView.next()
-        else if (event.key == Qt.Key_Escape || event.key == Qt.Key_Backspace || event.key == Qt.Key_Left)
-            stackView.prev()
-        else if (event.key == Qt.Key_Enter || event.key == Qt.Key_Return) {
-            if (stackView.currentItem.item.advance)
-                stackView.currentItem.item.advance()
+        if (event.key == Qt.Key_Space || event.key == Qt.Key_Right) {
+            root.userRequestedNextSlide()
+        }
+        else if (event.key == Qt.Key_Escape || event.key == Qt.Key_Backspace || event.key == Qt.Key_Left) {
+            root.userRequestedPrevSlide()
         }
         else
             return

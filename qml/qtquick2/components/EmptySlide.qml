@@ -14,6 +14,21 @@ Rectangle {
 
     state: "offscreen"
 
+    function userRequestedNextSlide() {
+        privateProps.exitDirection = privateProps.requestNextSlide
+        state = "offscreen"
+
+        if (!offscreenTransition)
+            gotoNextSlide()
+    }
+
+    function userRequestedPrevSlide() {
+        privateProps.exitDirection = privateProps.requestPrevSlide
+        state = "offscreen"
+
+        if (!offscreenTransition)
+            gotoPrevSlide()
+    }
 
     QtObject {
         id: privateProps
@@ -21,25 +36,6 @@ Rectangle {
         property int noUserRequest: -1
         property int requestNextSlide: 1
         property int requestPrevSlide: 2
-    }
-
-    MouseArea {
-        anchors.fill: parent
-        onClicked: {
-            privateProps.exitDirection = privateProps.requestNextSlide
-            slide.state = "offscreen"
-
-            if (!offscreenTransition)
-                gotoNextSlide()
-        }
-
-        onPressAndHold: {
-            privateProps.exitDirection = privateProps.requestPrevSlide
-            slide.state = "offscreen"
-
-            if (!offscreenTransition)
-                gotoPrevSlide()
-        }
     }
 
     Connections {
