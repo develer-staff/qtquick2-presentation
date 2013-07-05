@@ -38,13 +38,17 @@ BaseSlide {
             width: 80
             height: 30
             text: "Go!"
-            onClicked: browserRect.url = textInput.text
+            onClicked: {
+                browserRect.url = textInput.text
+                browserRect.loading = true
+            }
         }
     }
 
     Rectangle {
         id: browserRect
         property alias url: webView.url
+        property bool loading: false
         width: 650
         height: 450
         anchors.top: slide._titleItem.bottom
@@ -59,6 +63,24 @@ BaseSlide {
             anchors.fill: parent
             anchors.margins: 1
             clip: true
+            onLoadProgressChanged: {
+                if (loadProgress == 100)
+                    browserRect.loading = false
+            }
+        }
+
+        Image {
+            source: "../images/loading.png"
+            anchors.centerIn: parent
+            scale: 1
+            visible: browserRect.loading
+            NumberAnimation on rotation {
+                running: browserRect.loading
+                from: 0
+                to: 360
+                loops: Animation.Infinite
+                duration: 800
+            }
         }
     }
 
