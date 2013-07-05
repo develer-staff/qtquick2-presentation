@@ -2,9 +2,7 @@ import QtQuick 2.1
 
 Rectangle {
     id: slide
-    signal requestToGoNextSlide()
     signal gotoNextSlide()
-    signal requestToGoPrevSlide()
     signal gotoPrevSlide()
 
     property Transition offscreenTransition
