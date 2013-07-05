@@ -14,10 +14,26 @@ Item {
     focus: true
 
     function userRequestedNextSlide() {
+        for (var i = 5; i > 0; i--) { // a kind of virtual functions
+            var method = stackView.currentItem.item['userRequestedNextSlide' + i]
+            if (method) {
+                method()
+                return
+            }
+        }
+
         stackView.currentItem.item.userRequestedNextSlide()
     }
 
     function userRequestedPrevSlide() {
+        for (var i = 5; i > 0; i--) { // a kind of virtual functions
+            var method = stackView.currentItem.item['userRequestedPrevSlide' + i]
+            if (method) {
+                method()
+                return
+            }
+        }
+
         stackView.currentItem.item.userRequestedPrevSlide()
     }
 

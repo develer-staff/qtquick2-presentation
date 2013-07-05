@@ -6,6 +6,13 @@ EmptySlide {
     property int numPage
     property int totalPages
 
+    function userRequestedNextSlide1() {
+        if (!flipable.flipped)
+            flipable.flipped = true
+        else
+            userRequestedNextSlide()
+    }
+
     Flipable {
         id: flipable
         property bool flipped: false
@@ -70,12 +77,6 @@ EmptySlide {
             Behavior on angle {
                  NumberAnimation { duration: 1000 }
             }
-        }
-
-        MouseArea {
-            anchors.fill: parent
-            enabled: !flipable.flipped
-            onClicked: flipable.flipped = true
         }
 
         state: "offscreen"

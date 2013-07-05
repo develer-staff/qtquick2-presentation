@@ -5,6 +5,10 @@ import "../components"
 EmptySlide {
     id: slide
 
+    function userRequestedNextSlide1() {
+        // Avoid going to the void
+    }
+
     Rectangle {
         id: leftRect
         color: slide.alternateBgColor
