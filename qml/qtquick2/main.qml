@@ -655,16 +655,76 @@ Item {
                         }
                     }
                 }
-
-
             }
 
             Component {
-                BaseSlide {
-                    title: "Layout"
+                TextSlide {
+                    title: "Layouts"
+
+                    model: ListModel {
+                        ListElement {
+                            text: "Come per i controlli, poter progettare una gui facilmente ridimensionabile non era inizialmente importante."
+                            indentLevel: 0
+                            showDot: false
+                        }
+                        ListElement {
+                            text: "Il modulo QtQuick permette di posizionare gli elementi manualmente o tramite il sistema di ancore, che è molto potente ma complementare ai layout classici."
+                            indentLevel: 1
+                            showDot: true
+                        }
+                        ListElement {
+                            text: "Il modulo QtLayout sopperisce a questa mancanza mettendo a disposizione vari layout per disporre gli elementi in orizzontale, verticale o a griglia."
+                            indentLevel: 1
+                            showDot: true
+                        }
+                    }
                 }
             }
 
+            Component {
+                TextSlide {
+                    title: "Sensors"
+                    model: ListModel {
+                        ListElement {
+                            text: "Erede di Qt Mobility, il modulo Sensors fornisce un modo semplice di accedere, sia da Qml che da C++, ai sensori hardware tipici delle più moderne piattaforme mobili."
+                            indentLevel: 0
+                            showDot: false
+                        }
+                        ListElement {
+                            text: "Accelerometro"
+                            indentLevel: 1
+                            showDot: true
+                        }
+                        ListElement {
+                            text: "Giroscopio"
+                            indentLevel: 1
+                            showDot: true
+                        }
+                        ListElement {
+                            text: "Bussola"
+                            indentLevel: 1
+                            showDot: true
+                        }
+                        ListElement {
+                            text: "Sensore di rotazione"
+                            indentLevel: 1
+                            showDot: true
+                        }
+                    }
+                }
+            }
+
+            Component {
+                EndSlide {
+
+                }
+            }
+
+            Component {
+                LetsTalkSlide {
+
+                }
+            }
         }
 
         delegate: StackViewDelegate {

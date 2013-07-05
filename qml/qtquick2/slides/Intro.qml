@@ -35,13 +35,14 @@ EmptySlide {
         Text {
             id: talkAuthor
             color: slide.titleColor
-            font.pointSize: 26
+            font.pointSize: 24
             text: "Gianni Valdambrini"
             anchors.top: parent.top
         }
         Text {
             id: talkAuthor2
             anchors.top: talkAuthor.bottom
+            anchors.topMargin: 10
             color: slide.disabledColor
             font.pointSize: 16
             text: "Qt Certified Specialist"
@@ -50,7 +51,7 @@ EmptySlide {
         Text {
             id: talkTitle
             color: slide.textColor
-            font.pointSize: 26
+            font.pointSize: 24
             text: "Qt Quick2: the evolution"
             anchors.verticalCenter: parent.verticalCenter
             anchors.verticalCenterOffset: -10
@@ -84,7 +85,6 @@ EmptySlide {
         id: transition
         from: ""
         to: "offscreen"
-//        reversible: true
 
         SequentialAnimation {
             ParallelAnimation {
