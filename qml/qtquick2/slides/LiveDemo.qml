@@ -53,27 +53,11 @@ Image {
 
     }
 
-    Rectangle {
-        width: 120
-        height: 40
-        border.color: "#c0c0c0"
-        border.width: 1
-        gradient: Gradient {
-            GradientStop { position: 0.0; color: "ghostwhite" }
-            GradientStop { position: 0.33; color: "gainsboro" }
-            GradientStop { position: 1.0; color: "#c0c0c0" }
-        }
-        radius: 20
+    CustomButton {
         anchors.bottom: testArea.top
         anchors.bottomMargin: 10
         anchors.right: testArea.right
-
-        Text {
-            color: "#696969"
-            font.pointSize: 14
-            text: "Run!"
-            anchors.centerIn: parent
-        }
+        text: "Run!"
 
         MouseArea {
             anchors.fill: parent

@@ -1,5 +1,4 @@
 import QtQuick 2.1
-import QtWebKit 3.0
 
 import "slides"
 import "components"
@@ -269,7 +268,7 @@ Item {
                 }
 
                 ListElement {
-                    text: "Pur essendo basato su Javascript (interpretato), tutti egli effetti e animazioni sono realizzati direttamente in C++ (no overhead)."
+                    text: "Pur essendo basato su Javascript (interpretato), tutti gli effetti e animazioni sono realizzati direttamente in C++ (no overhead)."
                     indentLevel: 1
                     showDot: true
                 }
@@ -634,25 +633,8 @@ Item {
     }
 
     Component {
-        BaseSlide {
-            id: slide
-            title: "Webkit"
+        BrowserSlide {
 
-            Rectangle {
-                width: 650
-                height: 450
-                clip: true
-                anchors.top: slide._titleItem.bottom
-                anchors.topMargin: 30
-                anchors.horizontalCenter: parent.horizontalCenter
-                border.width: 1
-                border.color: "grey"
-
-                WebView {
-                    anchors.fill: parent
-                    url: "http://www.qt-project.org"
-                }
-            }
         }
     }
 
