@@ -20,6 +20,18 @@ BaseSlide {
         color: "black"
         state: "offscreen"
 
+
+        Image {
+            anchors.centerIn: parent
+            source: "../images/play.png"
+            scale: 1.5
+            z: 1
+            opacity: video.playbackState !== MediaPlayer.PlayingState ? 1 : 0
+            Behavior on opacity {
+                NumberAnimation { duration: 100 }
+            }
+        }
+
         onStateChanged: {
             if (state == "offscreen" && video.playbackState == MediaPlayer.PlayingState)
                 video.stop()
