@@ -4,6 +4,11 @@ import "../components"
 EmptySlide {
     id: slide
 
+
+    function userRequestedPrevSlide1() {
+        // Avoid going to the void
+    }
+
     Rectangle {
         id: leftRect
         color: slide.alternateBgColor
@@ -58,6 +63,15 @@ EmptySlide {
         }
 
         Text {
+            id: talkRepository
+            anchors.top: talkTitle.bottom
+            anchors.topMargin: 10
+            color: slide.disabledColor
+            font.pointSize: 16
+            text: "[https://github.com/gvaldambrini/qtquick2-bem]"
+        }
+
+        Text {
             id: talkDate
             color: slide.disabledColor
             font.pointSize: 20
@@ -77,6 +91,8 @@ EmptySlide {
             AnchorChanges { target: talkAuthor2; anchors.top: undefined; anchors.verticalCenter: parent.verticalCenter}
 
             PropertyChanges { target: talkTitle; font.pointSize: 70; opacity: 0 }
+            PropertyChanges { target: talkRepository; font.pointSize: 40; opacity: 0 }
+
             PropertyChanges { target: talkDate; font.pointSize: 40; opacity: 0 }
         }
     ]
@@ -91,7 +107,8 @@ EmptySlide {
                 NumberAnimation { targets: [talkAuthor, talkAuthor2]; properties: "font.pointSize, opacity"; duration: 250}
                 AnchorAnimation { targets: [talkAuthor, talkAuthor2]; duration: 250}
             }
-            NumberAnimation { target: talkTitle; properties: "font.pointSize, opacity"; duration: 250}
+            NumberAnimation { targets: [talkTitle, talkRepository]; properties: "font.pointSize, opacity"; duration: 250}
+
             NumberAnimation { target: talkDate; properties: "font.pointSize, opacity"; duration: 250}
         }
     }
