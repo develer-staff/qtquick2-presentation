@@ -44,12 +44,12 @@ Item {
     }
 
     Keys.onPressed: {
-        if (event.key == Qt.Key_Space || event.key == Qt.Key_Right) {
+        if (event.key == Qt.Key_Space || event.key == Qt.Key_Right)
             root.userRequestedNextSlide()
-        }
-        else if (event.key == Qt.Key_Escape || event.key == Qt.Key_Backspace || event.key == Qt.Key_Left) {
+        else if (event.key == Qt.Key_Backspace || event.key == Qt.Key_Left)
             root.userRequestedPrevSlide()
-        }
+        else if (event.key == Qt.Key_Escape)
+            Qt.quit()
         else
             return
 
