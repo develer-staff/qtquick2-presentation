@@ -51,8 +51,8 @@ EmptySlide {
                 }
 
                 ListElement {
-                    text: "Dove le prestazioni di Qml / Javascript non siano sufficienti è possibile scrivere la logica applicativa o i componenti grafici in C++."
-                    indentLevel: 1
+                    text: "Qt e Qt Quick sono open source ed hanno una community molto attiva per cui è facile trovare risposte in caso di problemi."
+                    indentLevel: 0
                     showDot: true
                 }
 

@@ -4,7 +4,7 @@ import "../components"
 
 BaseSlide {
     id: slide
-    title: "Qt: le piattaforme"
+    title: "Qt: le piattaforme supportate"
 
     BlockRectangles {
         id: rectDesktop

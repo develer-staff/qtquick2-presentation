@@ -12,7 +12,7 @@ Item {
 
     Component {
         TextSlide {
-            title: "Recap - Cosa è Qt?"
+            title: "Recap - Cosa è Qt? 1/3"
             model: ListModel {
                 ListElement {
                     text: "Qt è un framework cross platform, con cui potete scrivere il codice un'unica volta ed effettuare il deploy su vari sistemi desktop ed embedded."
@@ -37,7 +37,7 @@ Item {
 
     Component {
         TextSlide {
-            title: "Recap - Cosa è Qt?"
+            title: "Recap - Cosa è Qt? 2/3"
             model: ListModel {
                 ListElement {
                     text: "Qt è scritto in C++, tuttavia fa uso estensivo di un generatore di codice chiamato moc per implementare alcune funzionalità di alto livello non previste dal linguaggio."
@@ -52,7 +52,7 @@ Item {
                 }
 
                 ListElement {
-                    text: "Al fine di facilitare lo sviluppo le librerie sono rilasciate assieme a Qt Creator, un IDE potente ma leggero IDE per lo sviluppo e design delle applicazioni."
+                    text: "Al fine di facilitare lo sviluppo le librerie sono rilasciate assieme a Qt Creator, un IDE potente ma leggero per lo sviluppo e design delle applicazioni."
                     indentLevel: 0
                     showDot: true
                 }
@@ -62,7 +62,7 @@ Item {
 
     Component {
         TextSlide {
-            title: "Recap - Cosa è Qt?"
+            title: "Recap - Cosa è Qt? 3/3"
             spacing: 20
 
             model: ListModel {
@@ -80,6 +80,12 @@ Item {
 
                 ListElement {
                     text: "Multi-threading e multi-processing"
+                    indentLevel: 1
+                    showDot: true
+                }
+
+                ListElement {
+                    text: "Model/view framework"
                     indentLevel: 1
                     showDot: true
                 }
@@ -225,7 +231,7 @@ Item {
                 }
 
                 ListElement {
-                    text: "La sua natura dichiarativa (come HTML e CSS) rende il linguaggio più familiare ai non programmatori (designer in primis)"
+                    text: "La sua natura dichiarativa (come HTML e CSS) rende il linguaggio più familiare ai non programmatori"
                     indentLevel: 1
                     showDot: true
                 }
@@ -256,25 +262,25 @@ Item {
 
             model: ListModel {
                 ListElement {
-                    text: "Qt Quick è stato originariamente ideato per l'embedded, per questo alcune sue caratteristiche si sposano molto bene con questo mondo:"
+                    text: "Qt Quick è stato originariamente ideato per l'embedded, per questo:"
                     indentLevel: 0
                     showDot: false
                 }
 
                 ListElement {
-                    text: "Sfruttando l'accelerazione hardware messa a disposizione da OpenGL, Qt Quick è in grado di girare anche su piattaforme \"modeste\" con buoni risultati."
+                    text: "Sfruttando l'accelerazione hardware, Qt Quick è in grado di girare anche su piattaforme \"modeste\" con buoni risultati."
                     indentLevel: 1
                     showDot: true
                 }
 
                 ListElement {
-                    text: "Pur essendo basato su Javascript (interpretato), tutti gli effetti e animazioni sono realizzati direttamente in C++ (no overhead)."
+                    text: "Pur essendo basato su Javascript, tutti gli effetti e animazioni sono realizzati direttamente in C++ (no overhead)."
                     indentLevel: 1
                     showDot: true
                 }
 
                 ListElement {
-                    text: "In aggiunta, l'integrazione fra Qml e Qt/C++ è molto alta, ed è quindi facile scrivere parti della logica applicativa in C++ quando le prestazioni lo richiedano."
+                    text: "In aggiunta, l'integrazione fra Qml e Qt/C++ è molto alta ed è quindi facile scrivere parti dell'applicazione in C++ se necessario."
                     indentLevel: 2
                     showDot: true
                 }
@@ -300,14 +306,38 @@ Item {
                 anchors.right: parent.right
                 anchors.rightMargin: 100
                 z: 1
+
+                states: State {
+                    name: "offscreen"
+                    PropertyChanges { target: text; opacity: 0 }
+                }
+
+                transitions: Transition {
+                    NumberAnimation { target: text; property: "opacity"; duration: 200 }
+                }
             }
 
             Image {
+                id: image
                 anchors.bottom: slide._bottomRectItem.top
                 anchors.bottomMargin: -40
                 anchors.horizontalCenter: parent.horizontalCenter
                 source: "images/v1_vs_v2.png"
                 scale: .8
+
+                states: State {
+                    name: "offscreen"
+                    PropertyChanges { target: image; opacity: 0 }
+                }
+
+                transitions: Transition {
+                    NumberAnimation { target: image; property: "opacity"; duration: 200 }
+                }
+            }
+
+            onStateChanged:  {
+                text.state = state
+                image.state = state
             }
         }
     }
@@ -330,13 +360,37 @@ Item {
                 anchors.right: parent.right
                 anchors.rightMargin: 100
                 z: 1
+
+                states: State {
+                    name: "offscreen"
+                    PropertyChanges { target: text; opacity: 0 }
+                }
+
+                transitions: Transition {
+                    NumberAnimation { target: text; property: "opacity"; duration: 200 }
+                }
             }
 
             Image {
-                anchors.top: text.bottom
-                anchors.topMargin: 50
+                id: image
+                anchors.bottom: slide._bottomRectItem.top
+                anchors.bottomMargin: 130
                 anchors.horizontalCenter: parent.horizontalCenter
                 source: "images/benchmarks.png"
+
+                states: State {
+                    name: "offscreen"
+                    PropertyChanges { target: image; opacity: 0 }
+                }
+
+                transitions: Transition {
+                    NumberAnimation { target: image; property: "opacity"; duration: 200 }
+                }
+            }
+
+            onStateChanged:  {
+                text.state = state
+                image.state = state
             }
         }
     }
