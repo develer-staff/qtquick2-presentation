@@ -37,20 +37,25 @@ EmptySlide {
             bottom: parent.bottom
             bottomMargin: 40
         }
-        Text {
-            id: talkAuthor
-            color: slide.titleColor
-            font.pointSize: 24
-            text: "Gianni Valdambrini"
+
+        Column {
+            id: columnAuthor
+            spacing: 10
             anchors.top: parent.top
-        }
-        Text {
-            id: talkAuthor2
-            anchors.top: talkAuthor.bottom
-            anchors.topMargin: 10
-            color: slide.disabledColor
-            font.pointSize: 16
-            text: "Qt Certified Specialist"
+
+            Text {
+                id: talkAuthor
+                color: slide.titleColor
+                font.pointSize: 24
+                text: "Gianni Valdambrini"
+
+            }
+            Text {
+                id: talkAuthor2
+                color: slide.disabledColor
+                font.pointSize: 16
+                text: "Qt Certified Specialist"
+            }
         }
 
         Text {
@@ -87,8 +92,7 @@ EmptySlide {
             PropertyChanges { target: talkAuthor; font.pointSize: 60; opacity: 0 }
             PropertyChanges { target: talkAuthor2; font.pointSize: 40; opacity: 0 }
 
-            AnchorChanges { target: talkAuthor; anchors.top: undefined; anchors.verticalCenter: parent.verticalCenter; }
-            AnchorChanges { target: talkAuthor2; anchors.top: undefined; anchors.verticalCenter: parent.verticalCenter}
+            AnchorChanges { target: columnAuthor; anchors.top: undefined; anchors.verticalCenter: parent.verticalCenter; }
 
             PropertyChanges { target: talkTitle; font.pointSize: 70; opacity: 0 }
             PropertyChanges { target: talkRepository; font.pointSize: 40; opacity: 0 }
@@ -105,7 +109,7 @@ EmptySlide {
         SequentialAnimation {
             ParallelAnimation {
                 NumberAnimation { targets: [talkAuthor, talkAuthor2]; properties: "font.pointSize, opacity"; duration: 250}
-                AnchorAnimation { targets: [talkAuthor, talkAuthor2]; duration: 250}
+                AnchorAnimation { targets: columnAuthor; duration: 250}
             }
             NumberAnimation { targets: [talkTitle, talkRepository]; properties: "font.pointSize, opacity"; duration: 250}
 
