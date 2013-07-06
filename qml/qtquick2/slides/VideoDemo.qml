@@ -132,7 +132,7 @@ BaseSlide {
             }
 
             RadioButton {
-                text: "Black & white"
+                text: "Desaturate"
                 exclusiveGroup: group
                 onClicked:  {
                     if (videoContainer.effectObject)
@@ -143,10 +143,30 @@ BaseSlide {
 
                 Component {
                     id: desaturateComponent
+
                     Desaturate {
                         anchors.fill: video
                         source: video
                         desaturation: 1
+                    }
+                }
+            }
+
+            RadioButton {
+                text: "Emboss"
+                exclusiveGroup: group
+                onClicked:  {
+                    if (videoContainer.effectObject)
+                        videoContainer.effectObject.destroy()
+
+                    videoContainer.effectObject = embossComponent.createObject(videoContainer)
+                }
+
+                Component {
+                    id: embossComponent
+                    EmbossEffect {
+                        anchors.fill: video
+                        source: ShaderEffectSource { sourceItem: video; hideSource: true }
                     }
                 }
             }
