@@ -44,7 +44,7 @@ Image {
 
         states: State {
             name: "offscreen"
-            PropertyChanges { target:  textEdit; anchors.leftMargin: 0; opacity: 0; readOnly: true }
+            PropertyChanges { target:  textEdit; anchors.leftMargin: 0; opacity: 0; enabled: false }
         }
 
         transitions: Transition {

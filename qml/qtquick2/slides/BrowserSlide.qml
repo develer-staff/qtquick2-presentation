@@ -29,7 +29,7 @@ BaseSlide {
                 anchors.left: parent.left
                 anchors.leftMargin: 5
                 text: "http://www.qt-project.org"
-                readOnly: inputArea.state !== ""
+                enabled: inputArea.state == ""
             }
         }
 
@@ -67,6 +67,7 @@ BaseSlide {
                 if (loadProgress == 100)
                     browserRect.loading = false
             }
+            enabled: inputArea.state == ""
         }
 
         Image {
