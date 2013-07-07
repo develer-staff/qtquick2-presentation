@@ -114,13 +114,13 @@ BaseSlide {
 
                 model: ListModel {
                     ListElement {
-                        text: "Il modulo Particles implementa un completo sistema particellare, indispensabile per la realizzazione di videogiochi ma utile anche per la realizzazione di effetti complessi come la nebbia."
+                        text: "Il modulo Particles implementa un completo sistema particellare, indispensabile per la realizzazione di videogiochi ma utile anche per effetti complessi come la nebbia."
                         indentLevel: 0
                         showDot: true
                     }
 
                     ListElement {
-                        text: "Il modulo GraphicalEffects racchiude invece al suo interno numerosi effetti pronti all'uso e realizzati tramite gli shaders come:"
+                        text: "Il modulo GraphicalEffects racchiude al suo interno numerosi effetti pronti all'uso e realizzati tramite gli shaders come:"
                         indentLevel: 0
                         showDot: true
                     }

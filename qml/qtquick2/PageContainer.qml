@@ -237,13 +237,13 @@ Item {
                 }
 
                 ListElement {
-                    text: "Alcune sue caratteristiche (come i property bindings e la network transparency) rendono la logica dell'applicazione più lineare e semplice."
+                    text: "Alcune sue caratteristiche, come i property bindings, rendono la logica dell'applicazione più lineare e semplice."
                     indentLevel: 1
                     showDot: true
                 }
 
                 ListElement {
-                    text: "E' realizzato \“sopra\” le Qt in modo da sfruttarne i pregi ed ereditarne le funzionalità (es: accelerazione hardware, internazionalizzazione, risorse, ecc..)."
+                    text: "E' realizzato \“sopra\” le Qt in modo da sfruttarne i pregi ed ereditarne le funzionalità (es: accelerazione hardware, internazionalizzazione, ecc..)."
                     indentLevel: 0
                     showDot: true
                 }
@@ -268,7 +268,7 @@ Item {
                 }
 
                 ListElement {
-                    text: "Sfruttando l'accelerazione hardware, Qt Quick è in grado di girare anche su piattaforme \"modeste\" con buoni risultati."
+                    text: "Sfruttando l'accelerazione hardware, Qt Quick è in grado di girare su piattaforme \"modeste\" con buoni risultati."
                     indentLevel: 1
                     showDot: true
                 }
@@ -350,7 +350,7 @@ Item {
             Text {
                 id: text
                 font.pointSize: 18
-                text: "Grazie al lavoro di riscrittura dello stack grafico e all'adozione di un engine Javascript (attualmente, V8) più efficiente le prestazioni in alcuni casi risultano più che raddoppiate!"
+                text: "Grazie a questo lavoro e all'adozione di un engine Javascript più efficiente (attualmente, V8) le prestazioni in alcuni casi risultano più che raddoppiate!"
                 wrapMode: Text.WordWrap
                 color: slide.textColor
                 anchors.top: slide._topRectItem.bottom
@@ -438,7 +438,7 @@ Item {
 
     Component {
         TextSlide {
-            title: "QtQuick / QtQml"
+            title: "QtQuick"
 
             model: ListModel {
                 ListElement {
@@ -454,13 +454,13 @@ Item {
                 }
 
                 ListElement {
-                    text: "Elementi logici per gestire l'input dell'utente, come mousearea, drag&drop e campi per l'input di testo"
+                    text: "Elementi logici per gestire l'input dell'utente, come mousearea, gestures e campi per l'input di testo"
                     indentLevel: 1
                     showDot: true
                 }
 
                 ListElement {
-                    text: "Viste ed elementi logici utilizzabili per il posizionamento, come liste, griglie e path"
+                    text: "Vari tipi di view (liste, griglie, path) basate su modelli ed elementi logici utilizzabili per il posizionamento"
                     indentLevel: 1
                     showDot: true
                 }
@@ -476,7 +476,7 @@ Item {
 
     Component {
         TextSlide {
-            title: "QtQuick / QtQml"
+            title: "QtQuick"
 
             model: ListModel {
                 ListElement {
@@ -486,27 +486,59 @@ Item {
                 }
 
                 ListElement {
-                    text: "Un canvas per il disegno 2D simile al canvas fornito da HTML5"
+                    text: "Un canvas per il disegno 2D simile a quello di HTML5"
                     indentLevel: 1
                     showDot: true
                 }
 
                 ListElement {
-                    text: "Elementi logici per l'utilizzo di GLSL shaders (per effetti grafici) e per l'esecuzione di codice in un worker thread"
+                    text: "Elementi per l'integrazione di shaders per effetti grafici"
                     indentLevel: 1
                     showDot: true
                 }
 
                 ListElement {
-                    text: "Il modulo QtQml contiene elementi logici di utilità e modelli Qml utilizzabili con le viste del modulo QtQuick."
+                    text: "Un elemento per l'esecuzione di codice in un worker thread"
+                    indentLevel: 1
+                    showDot: true
+                }
+
+                ListElement {
+                    text: "Il modulo QtQuick comprende anche un'API C++ per estendere applicazioni Qml tramite codice Qt/C++."
+                    indentLevel: 0
+                    showDot: false
+                }
+            }
+        }
+    }
+
+    Component {
+        TextSlide {
+            title: "QtQml"
+            model: ListModel {
+
+                ListElement {
+                    text: "Il modulo QtQml comprende una serie di classi C++ che rappresentano l'engine di Qml stesso e:"
                     indentLevel: 0
                     showDot: false
                 }
 
                 ListElement {
-                    text: "La parte C++ del modulo è il runtime di Qml stesso e permette anche l'utilizzo di oggetti C++ come modelli per le viste di QtQuick."
+                    text: "Elementi (Qml) di comune utilità per timer, date, locale, ecc.."
                     indentLevel: 1
                     showDot: true
+                }
+
+                ListElement {
+                    text: "Elementi (Qml) per la creazione di modelli da usare con le viste del modulo QtQuick"
+                    indentLevel: 1
+                    showDot: true
+                }
+
+                ListElement {
+                    text: "In aggiunta la parte C++ del modulo permette anche l'utilizzo di oggetti C++ come modelli per le viste di QtQuick."
+                    indentLevel: 0
+                    showDot: false
                 }
             }
         }
@@ -523,7 +555,7 @@ Item {
                 }
 
                 ListElement {
-                    text: "XmlListModel è un modulo che permette di utilizzare il contenuto di un file xml come modello, utilizzando query XPath per l'estrazione delle role del modello."
+                    text: "XmlListModel è un modulo che permette di utilizzare il contenuto di un file xml come modello e di utilizzare query XPath per estrarre il contenuto selettivamente."
                     indentLevel: 0
                     showDot: true
                 }
@@ -539,7 +571,6 @@ Item {
 
     Component {
         EffectsSlide {
-
         }
     }
 
@@ -548,7 +579,7 @@ Item {
             title: "Multimedia"
             model: ListModel {
                 ListElement {
-                    text: "Il modulo Multimedia, appoggiandosi a backend specifici per i vari sistemi operativi supportati da Qt, integra al suo interno numerose funzionalità multimediali:"
+                    text: "Il modulo Multimedia, appoggiandosi a backend specifici per i vari sistemi operativi supportati da Qt, integra al suo interno numerose funzionalità multimediali come:"
                     indentLevel: 0
                     showDot: false
                 }
@@ -625,15 +656,29 @@ Item {
                     indentLevel: 0
                     showDot: false
                 }
+
                 ListElement {
-                    text: "Il modulo QtQuick permette di posizionare gli elementi manualmente o tramite il sistema di ancore, che è molto potente ma complementare ai layout classici."
+                    text: "Il modulo QtQuick permette di posizionare gli elementi:"
                     indentLevel: 1
                     showDot: true
                 }
+
                 ListElement {
-                    text: "Il modulo QtLayout sopperisce a questa mancanza mettendo a disposizione vari layout per disporre gli elementi in orizzontale, verticale o a griglia."
-                    indentLevel: 1
+                    text: "manualmente, specificando le coordinate dei singoli elementi"
+                    indentLevel: 2
                     showDot: true
+                }
+
+                ListElement {
+                    text: "tramite sistema di ancore"
+                    indentLevel: 2
+                    showDot: true
+                }
+
+                ListElement {
+                    text: "Il modulo QtLayouts mette a disposizione vari layout per disporre gli elementi e definire come devono espandersi al variare delle dimensioni dell'interfaccia."
+                    indentLevel: 0
+                    showDot: false
                 }
             }
         }
