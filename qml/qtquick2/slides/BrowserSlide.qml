@@ -52,7 +52,7 @@ BaseSlide {
         width: 650
         height: 450
         anchors.top: slide._titleItem.bottom
-        anchors.topMargin: 30
+        anchors.topMargin: 10
         anchors.horizontalCenter: parent.horizontalCenter
         border.width: 1
         border.color: slide.disabledColor
