@@ -570,7 +570,46 @@ Item {
     }
 
     Component {
-        EffectsSlide {
+        DropDownSlide {
+            title: "Particles / GraphicalEffects"
+
+            model: ListModel {
+                ListElement {
+                    text: "Il modulo Particles implementa un completo sistema particellare, indispensabile per la realizzazione di videogiochi ma utile anche per effetti complessi come la nebbia."
+                    indentLevel: 0
+                    showDot: true
+                }
+
+                ListElement {
+                    text: "Il modulo GraphicalEffects racchiude al suo interno numerosi effetti pronti all'uso e realizzati tramite gli shaders come:"
+                    indentLevel: 0
+                    showDot: true
+                }
+
+                ListElement {
+                    text: "blur"
+                    indentLevel: 1
+                    showDot: true
+                }
+
+                ListElement {
+                    text: "brightness & contrast"
+                    indentLevel: 1
+                    showDot: true
+                }
+
+                ListElement {
+                    text: "drop shadow"
+                    indentLevel: 1
+                    showDot: true
+                }
+
+                ListElement {
+                    text: "glow"
+                    indentLevel: 1
+                    showDot: true
+                }
+            }
         }
     }
 
