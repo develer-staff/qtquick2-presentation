@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/fonts">
+        <file>Granat-Regular.otf</file>
+    </qresource>
+</RCC>

@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
-    int id = QFontDatabase::addApplicationFont("Granat-Regular.otf");
+    int id = QFontDatabase::addApplicationFont(":/fonts/Granat-Regular.otf");
     QStringList families = QFontDatabase::applicationFontFamilies(id);
     QGuiApplication::setFont(QFont(families.at(0)));
 
