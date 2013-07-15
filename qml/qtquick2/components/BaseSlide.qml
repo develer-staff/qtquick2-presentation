@@ -4,9 +4,9 @@ EmptySlide {
     id: slide
     property int numPage
     property int totalPages
-    property alias title: title.text
+    property string title
 
-    property alias _titleItem: title
+    property alias _titleItem: titleItem
     property alias _topRectItem: topRect
     property alias _bottomRectItem: bottomRect
 
@@ -58,7 +58,8 @@ EmptySlide {
     }
 
     Text {
-        id: title
+        id: titleItem
+        text: qsTr(slide.title)
         color: slide.titleColor
         font.pointSize: 24
         anchors.top: parent.top

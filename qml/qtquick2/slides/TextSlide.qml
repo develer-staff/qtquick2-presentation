@@ -12,8 +12,9 @@ BaseSlide {
             return
         }
 
-        for (var i = 0; i < model.count; i++)
-            listView.model.append(model.get(i))
+        for (var i = 0; i < model.length; i++) {
+            listView.model.append(model[i])
+        }
     }
 
     ListView {

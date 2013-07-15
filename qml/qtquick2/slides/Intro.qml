@@ -54,7 +54,7 @@ EmptySlide {
                 id: talkAuthor2
                 color: slide.disabledColor
                 font.pointSize: 16
-                text: "Qt Certified Specialist"
+                text: qsTr("Qt Certified Specialist")
             }
         }
 
@@ -62,7 +62,7 @@ EmptySlide {
             id: talkTitle
             color: slide.textColor
             font.pointSize: 24
-            text: "Qt Quick2: the evolution"
+            text: qsTr("Qt Quick2: the evolution")
             anchors.verticalCenter: parent.verticalCenter
             anchors.verticalCenterOffset: -10
         }
@@ -80,7 +80,7 @@ EmptySlide {
             id: talkDate
             color: slide.disabledColor
             font.pointSize: 20
-            text: "Firenze, 8 Luglio 2013"
+            text: qsTr("Firenze, 8 Luglio 2013")
 
             anchors.bottom: parent.bottom
         }

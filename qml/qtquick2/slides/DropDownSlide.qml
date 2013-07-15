@@ -5,7 +5,7 @@ import "../components"
 
 BaseSlide {
     id: slide
-    property alias title: title.text
+    property string title
     property alias model: listView.model
 
     // The curtain effect and the related code is taken from Qt5 cinematic experience.
@@ -96,17 +96,18 @@ BaseSlide {
             anchors.margins: 40
 
             Text {
-                id: title
+                id: titleItem
                 anchors.top: parent.top
                 anchors.topMargin: 20
                 color: slide.titleColor
                 font.pointSize: 24
+                text: qsTr(slide.title)
             }
 
             ListView {
                 id: listView
-                anchors.left: title.left
-                anchors.top: title.bottom
+                anchors.left: titleItem.left
+                anchors.top: titleItem.bottom
                 anchors.topMargin: 50
                 anchors.bottom: parent.bottom
                 anchors.right: parent.right
@@ -136,7 +137,7 @@ BaseSlide {
                     Text {
                         id: delegateText
                         font.pointSize: 18
-                        text: model.text
+                        text: modelData.text
                         wrapMode: Text.WordWrap
                         color: slide.textColor
                         anchors.left: delegateItem.showDot ? delegateDot.right : parent.left

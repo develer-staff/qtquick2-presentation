@@ -4,7 +4,7 @@ import "../components"
 
 BaseSlide {
     id: slide
-    title: "Qt Quick live demo"
+    title: qsTr("Qt Quick live demo")
 
 
     TextEdit {
@@ -57,7 +57,7 @@ Image {
         anchors.bottom: testArea.top
         anchors.bottomMargin: 10
         anchors.right: testArea.right
-        text: "Run!"
+        text: qsTr("Run!")
 
         MouseArea {
             anchors.fill: parent
@@ -69,7 +69,7 @@ Image {
                     testArea.dynamicObject = Qt.createQmlObject(textEdit.text, testArea)
                 }
                 catch (err) {
-                    console.log("An error occurred")
+                    console.log(qsTr("An error occurred"))
                 }
             }
         }

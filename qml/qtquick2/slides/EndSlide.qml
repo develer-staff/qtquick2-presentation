@@ -35,33 +35,33 @@ EmptySlide {
             numPage: slide.numPage
             totalPages: slide.totalPages
             state: slide.state
-            title: "Per concludere.."
+            title: qsTr("Per concludere..")
 
-            model: ListModel {
-                ListElement {
-                    text: "Qt Quick è una tecnologia che, seppur con con qualche difetto di gioventù, è molto potente e permette di realizzare applicazioni complesse a grande velocità."
-                    indentLevel: 0
-                    showDot: true
-                }
+            model: [
+                {
+                    'text': qsTr("Qt Quick è una tecnologia che, seppur con con qualche difetto di gioventù, è molto potente e permette di realizzare applicazioni complesse a grande velocità."),
+                    'indentLevel': 0,
+                    'showDot': true
+                },
 
-                ListElement {
-                    text: "Grazie alla base di codice ereditata da Qt, offre un gran numero di funzionalità combinate con ottime performance."
-                    indentLevel: 0
-                    showDot: true
-                }
+                {
+                    'text': qsTr("Grazie alla base di codice ereditata da Qt, offre un gran numero di funzionalità combinate con ottime performance."),
+                    'indentLevel': 0,
+                    'showDot': true
+                },
 
-                ListElement {
-                    text: "Qt e Qt Quick sono open source ed hanno una community molto attiva per cui è facile trovare risposte in caso di problemi."
-                    indentLevel: 0
-                    showDot: true
-                }
+                {
+                    'text': qsTr("Qt e Qt Quick sono open source ed hanno una community molto attiva per cui è facile trovare risposte in caso di problemi."),
+                    'indentLevel': 0,
+                    'showDot': true
+                },
 
-                ListElement {
-                    text: "Qt Quick è oggi un'ottima scelta anche su Desktop e presto lo sarà anche per iOS/Android → Qt Everywhere"
-                    indentLevel: 0
-                    showDot: true
+                {
+                    'text': qsTr("Qt Quick è oggi un'ottima scelta anche su Desktop e presto lo sarà anche per iOS/Android → Qt Everywhere"),
+                    'indentLevel': 0,
+                    'showDot': true
                 }
-            }
+            ]
 
             onGotoNextSlide: slide.gotoNextSlide()
             onGotoPrevSlide: slide.gotoPrevSlide()

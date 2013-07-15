@@ -6,7 +6,7 @@ import "../components"
 
 BaseSlide {
     id: slide
-    title: "Webkit"
+    title: qsTr("Webkit")
 
     Row {
         id: inputArea
@@ -37,7 +37,7 @@ BaseSlide {
             id: button
             width: 80
             height: 30
-            text: "Go!"
+            text: qsTr("Go!")
             onClicked: {
                 browserRect.url = textInput.text
                 browserRect.loading = true

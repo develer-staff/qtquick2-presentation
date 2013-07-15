@@ -4,7 +4,7 @@ import "../components"
 
 BaseSlide {
     id: slide
-    title: "Qt: le piattaforme supportate"
+    title: qsTr("Qt: le piattaforme supportate")
 
     BlockRectangles {
         id: rectDesktop
@@ -33,13 +33,13 @@ BaseSlide {
         anchors.left: parent.left
         anchors.leftMargin: 100
 
-        title: "Desktop"
+        title: qsTr("Desktop")
 
-        itemsModel: ListModel {
-            ListElement { text: "Windows" }
-            ListElement { text: "Linux/X11" }
-            ListElement { text: "Mac OS X" }
-        }
+        itemsModel: [
+            { 'text': qsTr("Windows") },
+            { 'text': qsTr("Linux/X11") },
+            { 'text': qsTr("Mac OS X") }
+        ]
 
         states: State {
             name: "offscreen"
@@ -76,17 +76,17 @@ BaseSlide {
         anchors.right: parent.right
         anchors.rightMargin: 100
 
-        title: "Embedded"
+        title: qsTr("Embedded")
         state: "offscreen"
 
-        itemsModel: ListModel {
-            ListElement { text: "Linux Embedded" }
-            ListElement { text: "Windows Embedded" }
-            ListElement { text: "BlackBerry 10" }
-            ListElement { text: "iOS*" }
-            ListElement { text: "Android*" }
-            ListElement { text: "Windows 8*" }
-        }
+        itemsModel: [
+             { 'text': qsTr("Linux Embedded") },
+             { 'text': qsTr("Windows Embedded") },
+             { 'text': qsTr("BlackBerry 10") },
+             { 'text': qsTr("iOS*") },
+             { 'text': qsTr("Android*") },
+             { 'text': qsTr("Windows 8*") }
+        ]
 
         states: State {
             name: "offscreen"
@@ -102,7 +102,7 @@ BaseSlide {
     Text {
         id: text
         font.pointSize: 18
-        text: "In aggiunta esistono porting ufficiali per alcuni sistemi operativi Real-Time come QNX o VxWorks ed altri porting mantenuti invece dalla comunità."
+        text: qsTr("In aggiunta esistono porting ufficiali per alcuni sistemi operativi Real-Time come QNX o VxWorks ed altri porting mantenuti invece dalla comunità.")
         color: slide.textColor
         anchors.top: parent.top
         anchors.topMargin: 550

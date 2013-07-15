@@ -31,7 +31,7 @@ EmptySlide {
         id: title
         color: slide.titleColor
         font.pointSize: 24
-        text: "Let's talk"
+        text: qsTr("Let's talk")
 
         anchors {
             left: leftRect.right
@@ -53,7 +53,7 @@ EmptySlide {
         Text {
             color: slide.disabledColor
             font.pointSize: 18
-            text: "Office"
+            text: qsTr("Office")
         }
 
         Text {
@@ -74,7 +74,7 @@ EmptySlide {
         Text {
             color: slide.disabledColor
             font.pointSize: 18
-            text: "Email"
+            text: qsTr("Email")
         }
 
         Text {
@@ -95,7 +95,7 @@ EmptySlide {
         Text {
             color: slide.disabledColor
             font.pointSize: 18
-            text: "Web"
+            text: qsTr("Web")
         }
 
         Text {

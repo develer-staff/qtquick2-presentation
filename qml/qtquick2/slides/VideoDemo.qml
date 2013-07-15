@@ -8,7 +8,7 @@ import "../components"
 
 BaseSlide {
     id: slide
-    title: "Qt Quick: funzionalità multimediali"
+    title: qsTr("Qt Quick: funzionalità multimediali")
 
     Rectangle {
         id: videoContainer
@@ -122,7 +122,7 @@ BaseSlide {
             anchors.horizontalCenter: rectBg.horizontalCenter
             ExclusiveGroup { id: group }
             RadioButton {
-                text: "Nessun effetto"
+                text: qsTr("Nessun effetto")
                 exclusiveGroup: group
                 checked: true
                 onClicked: {
@@ -132,7 +132,7 @@ BaseSlide {
             }
 
             RadioButton {
-                text: "Desaturate"
+                text: qsTr("Desaturate")
                 exclusiveGroup: group
                 onClicked:  {
                     if (videoContainer.effectObject)
@@ -153,7 +153,7 @@ BaseSlide {
             }
 
             RadioButton {
-                text: "Emboss"
+                text: qsTr("Emboss")
                 exclusiveGroup: group
                 onClicked:  {
                     if (videoContainer.effectObject)
@@ -172,7 +172,7 @@ BaseSlide {
             }
 
             RadioButton {
-                text: "Blur"
+                text: qsTr("Blur")
                 exclusiveGroup: group
                 onClicked:  {
                     if (videoContainer.effectObject)

@@ -22,7 +22,7 @@ Rectangle {
         anchors.bottomMargin: 10
         anchors.horizontalCenter: parent.horizontalCenter
         spacing: 10
-        rows: itemsModel.count / 3
+        rows: repeater.count / 3
 
         Repeater {
             id: repeater
@@ -36,7 +36,7 @@ Rectangle {
                 Text {
                     color: "#696969"
                     font.pointSize: 14
-                    text: model.text
+                    text: modelData.text
                     anchors.fill: parent
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
