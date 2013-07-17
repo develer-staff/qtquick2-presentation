@@ -8,8 +8,8 @@ import "components"
 
 Item {
     id: root
-    width: 1024 // Screen.width
-    height: 768 // Screen.height
+    width: fullscreen ? Screen.width : 1024
+    height: fullscreen ? Screen.height : 768
 
     focus: true
 
