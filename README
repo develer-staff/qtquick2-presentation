@@ -1,0 +1,10 @@
+This presentation was made using QtQuick 2.1 and uses many modules like Webkit or Multimedia to demonstrate the QtQuick functionalities.
+
+To build the presentation you need a Qt >= 5.1.
+To compile, just run qmake && make.
+
+
+To run the application in fullscreen mode, use '--fullscreen' argument. To execute
+the presentation in Italian, use the '--language=it' argument.
+
+Feel free to contact me for any questions at <aleister@develer.com>
