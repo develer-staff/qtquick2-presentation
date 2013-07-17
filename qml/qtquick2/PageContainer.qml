@@ -12,20 +12,20 @@ Item {
 
     Component {
         TextSlide {
-            title: qsTr("Recap - Cosa è Qt? 1/3")
+            title: qsTr("Recap - What is Qt? 1/3")
             model: [
                 {
-                    'text': qsTr("Qt è un framework cross platform, con cui potete scrivere il codice un'unica volta ed effettuare il deploy su vari sistemi desktop ed embedded."),
+                    'text': qsTr("Qt is an application cross platform, which can be used to write the code once and deploy on many desktop and embedded OSes."),
                     'indentLevel': 0,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("Qt è anche una libreria, mettendo a disposizione un ampio set di componenti già pronti all'uso."),
+                    'text': qsTr("Qt is also a library and offers many component ready to use."),
                     'indentLevel': 0,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("Qt è particolarmente adatto per lo sviluppo su dispositivi embedded, e gira su ogni Linux con un compilatore C++ “decente”."),
+                    'text': qsTr("Qt is well-suited for embedded development and runs on every Linux with a decent C++ compiler."),
                     'indentLevel': 0,
                     'showDot': true
                 }
@@ -35,20 +35,20 @@ Item {
 
     Component {
         TextSlide {
-            title: qsTr("Recap - Cosa è Qt? 2/3")
+            title: qsTr("Recap - What is Qt? 2/3")
             model: [
                 {
-                    'text': qsTr("Qt è scritto in C++, tuttavia fa uso estensivo di un generatore di codice chiamato moc per implementare alcune funzionalità di alto livello non previste dal linguaggio."),
+                    'text': qsTr("Qt is written in C++, however it uses extensively a code generator called moc to implement many high level functionalities not offered by the language."),
                     'indentLevel': 0,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("E' possibile estendere le applicazioni scritte in C++ tramite embedding di linguaggi di scripting (basati su Javascript o Python)."),
+                    'text': qsTr("It is possible to extend applications written in C++ by embedding script engines based on Javascript or Python."),
                     'indentLevel': 0,
                     'showDot': true,
                 },
                 {
-                    'text': qsTr("Al fine di facilitare lo sviluppo le librerie sono rilasciate assieme a Qt Creator, un IDE potente ma leggero per lo sviluppo e design delle applicazioni."),
+                    'text': qsTr("To make the development easier Qt libraries are released with Qt Creator, a powerful but lightweight IDE for developing and designing applications."),
                     'indentLevel': 0,
                     'showDot': true
                 }
@@ -58,22 +58,22 @@ Item {
 
     Component {
         TextSlide {
-            title: qsTr("Recap - Cosa è Qt? 3/3")
+            title: qsTr("Recap - What is Qt? 3/3")
             spacing: 20
 
             model: [
                 {
-                    'text': qsTr("Qt mette a disposizione del programmatore un gran numero di funzionalità pronte all'uso:"),
+                    'text': qsTr("Qt offers many functionalities ready to use:"),
                     'indentLevel': 0,
                     'showDot': false
                 },
                 {
-                    'text': qsTr("Internazionalizzazione e supporto unicode"),
+                    'text': qsTr("Internationalization and unicode support"),
                     'indentLevel': 1,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("Multi-threading e multi-processing"),
+                    'text': qsTr("Multi-threading and multi-processing"),
                     'indentLevel': 1,
                     'showDot': true
                 },
@@ -83,7 +83,7 @@ Item {
                     'showDot': true
                 },
                 {
-                    'text': qsTr("Networking e meccanismi di IPC"),
+                    'text': qsTr("Networking and IPC mechanisms"),
                     'indentLevel': 1,
                     'showDot': true
                 },
@@ -98,7 +98,7 @@ Item {
                     'showDot': true
                 },
                 {
-                    'text': qsTr("Xml e database"),
+                    'text': qsTr("Xml and databases"),
                     'indentLevel': 1,
                     'showDot': true
                 }
@@ -108,25 +108,25 @@ Item {
 
     Component {
         TextSlide {
-            title: qsTr("Le licenze di Qt")
+            title: qsTr("Qt licenses")
             model: [
                 {
-                    'text': qsTr("Qt è disponibile con due licenze:"),
+                    'text': qsTr("Qt is available under two licenses:"),
                     'indentLevel': 0,
                     'showDot': false
                 },
                 {
-                    'text': qsTr("Open source (LGPL v. 2.1) → permette di sviluppare applicazioni con linking dinamico alle Qt senza dover rilasciare il codice o pagare costi di licenza."),
+                    'text': qsTr("Open source (LGPL v. 2.1) → allows you to develop applications with dynamic linking without releasing the sources or pay licensing fees."),
                     'indentLevel': 1,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("Commerciale → per sviluppatore e con costo dipendente dal numero di piattaforme “target”, permette di usare in piena libertà Qt ed è comprensivo di supporto."),
+                    'text': qsTr("Commercial → the cost depends on developer and target platforms number, allows you to use Qt freely and includes support."),
                     'indentLevel': 1,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("Per approfondire: http://qt.digia.com/licensing"),
+                    'text': qsTr("For details: http://qt.digia.com/licensing"),
                     'indentLevel': 0,
                     'showDot': false
                 }
@@ -146,25 +146,25 @@ Item {
 
     Component {
         TextSlide {
-            title: qsTr("Limitazioni di Qt")
+            title: qsTr("Qt limits")
             model: [
                 {
-                    'text': qsTr("Quanto codice serve per...?"),
+                    'text': qsTr("How much code is needed for...?"),
                     'indentLevel': 0,
                     'showDot': false
                 },
                 {
-                    'text': qsTr("Modificare la posizione di alcuni elementi"),
+                    'text': qsTr("Modify the position of some elements"),
                     'indentLevel': 1,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("Animare gli elementi della gui o integrare transizioni fra pagine"),
+                    'text': qsTr("Animate gui elements or adding page transitions"),
                     'indentLevel': 1,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("Cambiare l'aspetto di una o più finestre a seconda di uno stato logico"),
+                    'text': qsTr("Update the appearance of one or more windows depends on a (logic) status"),
                     'indentLevel': 1,
                     'showDot': true
                 }
@@ -179,22 +179,22 @@ Item {
 
             model: [
                 {
-                    'text': qsTr("Qt Quick è un insieme di tecnologie:"),
+                    'text': qsTr("Qt Quick is a set of tecnologies:"),
                     'indentLevel': 0,
                     'showDot': false
                 },
                 {
-                    'text': qsTr("Il linguaggio dichiarativo, chiamato Qml ed estensione di Javascript."),
+                    'text': qsTr("The declarative language, called Qml and extension of Javascript."),
                     'indentLevel': 1,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("Il runtime, che permette l'accesso a funzionalità e strutture dati di Qt/C++."),
+                    'text': qsTr("The runtime, which permits to access to functionalities and data structures of Qt/C++."),
                     'indentLevel': 1,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("QtCreator, che integra un editor avanzato di Qml, un designer grafico di UI e un debugger/profiler."),
+                    'text': qsTr("QtCreator, that includes an advanced Qml editor, an UI designer and a debugger/profiler."),
                     'indentLevel': 1,
                     'showDot': true
                 }
@@ -208,22 +208,22 @@ Item {
 
             model: [
                 {
-                    'text': qsTr("Qt Quick velocizza la realizzazione di GUI ed è quindi molto indicato per il fast prototyping di applicazioni:"),
+                    'text': qsTr("Qt Quick speeds up creating GUI so it is very indicated for fast prototyping of applications:"),
                     'indentLevel': 0,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("La sua natura dichiarativa (come HTML e CSS) rende il linguaggio più familiare ai non programmatori"),
+                    'text': qsTr("Its declarative nature (as HTML and CSS) makes the language more familiar for non programmers"),
                     'indentLevel': 1,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("Alcune sue caratteristiche, come i property bindings, rendono la logica dell'applicazione più lineare e semplice."),
+                    'text': qsTr("Some of its characteristics, as property bindings, make the application logic linear and simpler."),
                     'indentLevel': 1,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("E' realizzato \“sopra\” le Qt in modo da sfruttarne i pregi ed ereditarne le funzionalità (es: accelerazione hardware, internazionalizzazione, ecc..)."),
+                    'text': qsTr("It is built on the top of Qt to exploit the advantages and inherits the functionalities (ex: hardware acceleration, internationalization, etc..)."),
                     'indentLevel': 0,
                     'showDot': true
                 }
@@ -238,26 +238,26 @@ Item {
 
     Component {
         TextSlide {
-            title: qsTr("Qt Quick e l'embedded")
+            title: qsTr("Qt Quick and embedded systems")
 
             model: [
                 {
-                    'text': qsTr("Qt Quick è stato originariamente ideato per l'embedded, per questo:"),
+                    'text': qsTr("Qt Quick was originally designed for embedded systems, so:"),
                     'indentLevel': 0,
                     'showDot': false
                 },
                 {
-                    'text': qsTr("Sfruttando l'accelerazione hardware, Qt Quick è in grado di girare su piattaforme \"modeste\" con buoni risultati."),
+                    'text': qsTr("Using hardware acceleration, Qt Quick can run on limited hardware with good performance."),
                     'indentLevel': 1,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("Pur essendo basato su Javascript, tutti gli effetti e animazioni sono realizzati direttamente in C++ (no overhead)."),
+                    'text': qsTr("Even if the language is based on Javascript, all the effects and animations are built in C++ (no overhead)."),
                     'indentLevel': 1,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("In aggiunta, l'integrazione fra Qml e Qt/C++ è molto alta ed è quindi facile scrivere parti dell'applicazione in C++ se necessario."),
+                    'text': qsTr("In addition, the integration between Qml and Qt/C++ is very tight so it is easy to write parts of applications in C++ if needed."),
                     'indentLevel': 2,
                     'showDot': true
                 }
@@ -273,7 +273,7 @@ Item {
             Text {
                 id: text
                 font.pointSize: 18
-                text: qsTr("Con Qt5/Qt Quick2 è stato riscritto buona parte dello stack grafico per ottimizzare le prestazioni e sfruttare appieno l'accelerazione hardware.")
+                text: qsTr("For Qt5/Qt Quick2 a great part of the graphical stack was rewritten to optimize the performances and take advantage of the hardware acceleration.")
                 wrapMode: Text.WordWrap
                 color: slide.textColor
                 anchors.top: slide._topRectItem.bottom
@@ -327,7 +327,7 @@ Item {
             Text {
                 id: text
                 font.pointSize: 18
-                text: qsTr("Grazie a questo lavoro e all'adozione di un engine Javascript più efficiente (attualmente, V8) le prestazioni in alcuni casi risultano più che raddoppiate!")
+                text: qsTr("Thanks to this work and to the adoption of a more efficient Javascript engine (now, V8), performance is more than doubled in some cases!")
                 wrapMode: Text.WordWrap
                 color: slide.textColor
                 anchors.top: slide._topRectItem.bottom
@@ -374,7 +374,7 @@ Item {
 
     Component {
         TextSlide {
-            title: qsTr("Qt Quick: i (principali) moduli")
+            title: qsTr("Qt Quick: (main) modules")
 
             model: [
                 {
@@ -417,27 +417,27 @@ Item {
 
             model: [
                 {
-                    'text': qsTr("Il modulo QtQuick è il modulo \"base\", contenente gli elementi necessari per la costruzione di ogni interfaccia grafica:"),
+                    'text': qsTr("The QtQuick module is the base module and contains all the required elements to build every UI:"),
                     'indentLevel': 0,
                     'showDot': false
                 },
                 {
-                    'text': qsTr("Elementi visuali molto semplici, ad esempio rettangoli, immagini e testo"),
+                    'text': qsTr("Simple visual elements as rectangles, images and texts"),
                     'indentLevel': 1,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("Elementi logici per gestire l'input dell'utente, come mousearea, gestures e campi per l'input di testo"),
+                    'text': qsTr("Logical elements to handle user inputs as mousearea, gestures and input text fields"),
                     'indentLevel': 1,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("Vari tipi di view (liste, griglie, path) basate su modelli ed elementi logici utilizzabili per il posizionamento"),
+                    'text': qsTr("Many types of views (lists, grid and path) based on models and logical elements which can be used to position visual elements"),
                     'indentLevel': 1,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("Animazioni e transizioni fra stati"),
+                    'text': qsTr("Animations and state transitions"),
                     'indentLevel': 1,
                     'showDot': true
                 }
@@ -451,27 +451,27 @@ Item {
 
             model: [
                 {
-                    'text': qsTr("Il modulo QtQuick contiene anche:"),
+                    'text': qsTr("The QtQuick module also contains:"),
                     'indentLevel': 0,
                     'showDot': false
                 },
                 {
-                    'text': qsTr("Un canvas per il disegno 2D simile a quello di HTML5"),
+                    'text': qsTr("A 2D canvas similar to the one offered by HTML5"),
                     'indentLevel': 1,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("Elementi per l'integrazione di shaders per effetti grafici"),
+                    'text': qsTr("Shader elements to create graphical effects"),
                     'indentLevel': 1,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("Un elemento per l'esecuzione di codice in un worker thread"),
+                    'text': qsTr("An element to execute parallel code using a worker thread"),
                     'indentLevel': 1,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("Il modulo QtQuick comprende anche un'API C++ per estendere applicazioni Qml tramite codice Qt/C++."),
+                    'text': qsTr("The QtQuick module comes also with a C++ API to extend applications written in Qml using Qt/C++."),
                     'indentLevel': 0,
                     'showDot': false
                 }
@@ -484,22 +484,22 @@ Item {
             title: qsTr("QtQml")
             model: [
                 {
-                    'text': qsTr("Il modulo QtQml comprende una serie di classi C++ che rappresentano l'engine di Qml stesso e:"),
+                    'text': qsTr("The QtQml module contains some C++ classes that represent the Qml engine and:"),
                     'indentLevel': 0,
                     'showDot': false
                 },
                 {
-                    'text': qsTr("Elementi (Qml) di comune utilità per timer, date, locale, ecc.."),
+                    'text': qsTr("Qml elements for common usage like timer, date, locale, etc.."),
                     'indentLevel': 1,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("Elementi (Qml) per la creazione di modelli da usare con le viste del modulo QtQuick"),
+                    'text': qsTr("Qml elements for building models to use together the QtQuick module views"),
                     'indentLevel': 1,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("In aggiunta la parte C++ del modulo permette anche l'utilizzo di oggetti C++ come modelli per le viste di QtQuick."),
+                    'text': qsTr("In addition the C++ part of the module allows the user to use C++ objects as models for the QtQuick views."),
                     'indentLevel': 0,
                     'showDot': false
                 }
@@ -512,17 +512,17 @@ Item {
             title: qsTr("LocalStorage / XmlListModel / FolderListModel*")
             model: [
                 {
-                    'text': qsTr("LocalStorage offre un facile accesso ad un database SQLite per la memorizzazione di informazioni persistenti direttamente da Qml."),
+                    'text': qsTr("LocalStorage offers an easy access to an SQLite database to store and retrieve persistent information from Qml."),
                     'indentLevel': 0,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("XmlListModel è un modulo che permette di utilizzare il contenuto di un file xml come modello e di utilizzare query XPath per estrarre il contenuto selettivamente."),
+                    'text': qsTr("XmlListModel is a module which permits to use the content of an xml file as a model and to use XPath queries to extract its content."),
                     'indentLevel': 0,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("FolderListModel* permette di utilizzare il contenuto di una directory come modello."),
+                    'text': qsTr("FolderListModel* allows to use the content of a directory as a model."),
                     'indentLevel': 0,
                     'showDot': true
                 }
@@ -536,12 +536,12 @@ Item {
 
             model: [
                 {
-                    'text': qsTr("Il modulo Particles implementa un completo sistema particellare, indispensabile per la realizzazione di videogiochi ma utile anche per effetti complessi come la nebbia."),
+                    'text': qsTr("The Particles module implements a complete particles system, essential to develop videogames but useful also to create complex effects like fog."),
                     'indentLevel': 0,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("Il modulo GraphicalEffects racchiude al suo interno numerosi effetti pronti all'uso e realizzati tramite gli shaders come:"),
+                    'text': qsTr("The GraphicalEffects module contains many - ready to use - graphical effects built using shaders like:"),
                     'indentLevel': 0,
                     'showDot': true
                 },
@@ -574,22 +574,22 @@ Item {
             title: qsTr("Multimedia")
             model: [
                 {
-                    'text': qsTr("Il modulo Multimedia, appoggiandosi a backend specifici per i vari sistemi operativi supportati da Qt, integra al suo interno numerose funzionalità multimediali come:"),
+                    'text': qsTr("The Multimedia module, which is based upon the specific functions provided by the underlying platform, contains many multimedia functionalities as:"),
                     'indentLevel': 0,
                     'showDot': false
                 },
                 {
-                    'text': qsTr("riproduzione di audio e video"),
+                    'text': qsTr("audio and video players"),
                     'indentLevel': 1,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("registrazione di video"),
+                    'text': qsTr("video recording"),
                     'indentLevel': 1,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("funzionalità radio"),
+                    'text': qsTr("radio functionalities"),
                     'indentLevel': 1,
                     'showDot': true
                 }
@@ -608,12 +608,12 @@ Item {
             title: qsTr("Controls")
             model: [
                 {
-                    'text': qsTr("Poiché QtQuick è stato ideato per embedded, avere un set di controlli standard non era molto importante."),
+                    'text': qsTr("Because QtQuick was originally designed for embedded platforms, having standard controls was not a must have feature."),
                     'indentLevel': 0,
                     'showDot': false
                 },
                 {
-                    'text': qsTr("Le cose sono cambiate quando si è visto che QtQuick poteva essere utile anche per Desktop."),
+                    'text': qsTr("Things changed when people started using QtQuick also on the Desktop."),
                     'indentLevel': 1,
                     'showDot': true
                 }
@@ -644,27 +644,27 @@ Item {
 
             model: [
                 {
-                    'text': qsTr("Come per i controlli, poter progettare una gui facilmente ridimensionabile non era inizialmente importante."),
+                    'text': qsTr("As for the controls, making an UI easily resizable was not important at the beginning."),
                     'indentLevel': 0,
                     'showDot': false
                 },
                 {
-                    'text': qsTr("Il modulo QtQuick permette di posizionare gli elementi:"),
+                    'text': qsTr("QtQuick module allows to position elements:"),
                     'indentLevel': 1,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("manualmente, specificando le coordinate dei singoli elementi"),
+                    'text': qsTr("manually, specifying the coordinates of single elements"),
                     'indentLevel': 2,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("tramite sistema di ancore"),
+                    'text': qsTr("using the anchors system"),
                     'indentLevel': 2,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("Il modulo QtLayouts mette a disposizione vari layout per disporre gli elementi e definire come devono espandersi al variare delle dimensioni dell'interfaccia."),
+                    'text': qsTr("The QtLayouts module offers some layouts to organize elements and to define how they have to resize when the ui size is changed."),
                     'indentLevel': 0,
                     'showDot': false
                 }
@@ -677,27 +677,27 @@ Item {
             title: qsTr("Sensors")
             model: [
                 {
-                    'text': qsTr("Erede di Qt Mobility, il modulo Sensors fornisce un modo semplice di accedere, sia da Qml che da C++, ai sensori hardware tipici delle più moderne piattaforme mobili."),
+                    'text': qsTr("Successor of Qt Mobility, the Sensor module offers a simple way to access, from Qml and C++, to those hardware sensors so common on the modern mobile platforms."),
                     'indentLevel': 0,
                     'showDot': false
                 },
                 {
-                    'text': qsTr("Accelerometro"),
+                    'text': qsTr("Accelerometer"),
                     'indentLevel': 1,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("Giroscopio"),
+                    'text': qsTr("Gyroscope"),
                     'indentLevel': 1,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("Bussola"),
+                    'text': qsTr("Compass"),
                     'indentLevel': 1,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("Sensore di rotazione"),
+                    'text': qsTr("Rotation sensor"),
                     'indentLevel': 1,
                     'showDot': true
                 }

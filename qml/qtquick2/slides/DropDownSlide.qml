@@ -8,6 +8,8 @@ BaseSlide {
     property string title
     property alias model: listView.model
 
+    _titleVisible: false
+
     // The curtain effect and the related code is taken from Qt5 cinematic experience.
     QtObject {
         id: priv

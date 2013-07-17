@@ -8,7 +8,7 @@ import "../components"
 
 BaseSlide {
     id: slide
-    title: qsTr("Qt Quick: funzionalità multimediali")
+    title: qsTr("Qt Quick: multimedia functionalities")
 
     Rectangle {
         id: videoContainer
@@ -114,7 +114,7 @@ BaseSlide {
 
             Text {
                 font.pointSize: 13
-                text: "Effetto applicato"
+                text: qsTr("Effect")
             }
 
             anchors.top: rectBg.top
@@ -122,7 +122,7 @@ BaseSlide {
             anchors.horizontalCenter: rectBg.horizontalCenter
             ExclusiveGroup { id: group }
             RadioButton {
-                text: qsTr("Nessun effetto")
+                text: qsTr("No effect")
                 exclusiveGroup: group
                 checked: true
                 onClicked: {

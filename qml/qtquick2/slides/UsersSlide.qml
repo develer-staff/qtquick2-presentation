@@ -3,7 +3,7 @@ import "../components"
 
 
 BaseSlide {
-    title: qsTr("Qt: chi lo usa")
+    title: qsTr("Qt: users")
 
     Item {
         id: container

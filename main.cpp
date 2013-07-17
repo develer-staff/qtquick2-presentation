@@ -2,6 +2,8 @@
 #include <QFontDatabase>
 #include <QStringList>
 #include <QFont>
+#include <QTranslator>
+#include <QDebug>
 
 #include "qtquick2applicationviewer.h"
 
@@ -10,7 +12,11 @@ int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
-    int id = QFontDatabase::addApplicationFont(":/fonts/Granat-Regular.otf");
+    QTranslator translator;
+    translator.load(":/common/qtquick2-bem_it.qm");
+    app.installTranslator(&translator);
+
+    int id = QFontDatabase::addApplicationFont(":/common/Granat-Regular.otf");
     QStringList families = QFontDatabase::applicationFontFamilies(id);
     QGuiApplication::setFont(QFont(families.at(0)));
 

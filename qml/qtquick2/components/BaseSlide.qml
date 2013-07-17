@@ -6,6 +6,7 @@ EmptySlide {
     property int totalPages
     property string title
 
+    property alias _titleVisible: titleItem.visible
     property alias _titleItem: titleItem
     property alias _topRectItem: topRect
     property alias _bottomRectItem: bottomRect

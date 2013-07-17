@@ -35,29 +35,29 @@ EmptySlide {
             numPage: slide.numPage
             totalPages: slide.totalPages
             state: slide.state
-            title: qsTr("Per concludere..")
+            title: qsTr("To summarize..")
 
             model: [
                 {
-                    'text': qsTr("Qt Quick è una tecnologia che, seppur con con qualche difetto di gioventù, è molto potente e permette di realizzare applicazioni complesse a grande velocità."),
+                    'text': qsTr("Qt Quick is a tecnology which is very powerful despite some defect of youth and allows to create complex applications very quickly."),
                     'indentLevel': 0,
                     'showDot': true
                 },
 
                 {
-                    'text': qsTr("Grazie alla base di codice ereditata da Qt, offre un gran numero di funzionalità combinate con ottime performance."),
+                    'text': qsTr("Thanks to the codebase inherited from Qt, it offers many functionalities combined with great performance."),
                     'indentLevel': 0,
                     'showDot': true
                 },
 
                 {
-                    'text': qsTr("Qt e Qt Quick sono open source ed hanno una community molto attiva per cui è facile trovare risposte in caso di problemi."),
+                    'text': qsTr("Qt and Qt Quick are open source and with a very active community so it is easy to find answers in case of problems."),
                     'indentLevel': 0,
                     'showDot': true
                 },
 
                 {
-                    'text': qsTr("Qt Quick è oggi un'ottima scelta anche su Desktop e presto lo sarà anche per iOS/Android → Qt Everywhere"),
+                    'text': qsTr("Qt Quick is today a great choice for Desktop and in a few days also for iOS/Android→ Qt Everywhere"),
                     'indentLevel': 0,
                     'showDot': true
                 }

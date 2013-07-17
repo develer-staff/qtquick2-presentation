@@ -4,7 +4,7 @@ import "../components"
 
 BaseSlide {
     id: slide
-    title: qsTr("Qt: le piattaforme supportate")
+    title: qsTr("Qt: supported platforms")
 
     BlockRectangles {
         id: rectDesktop
@@ -80,7 +80,7 @@ BaseSlide {
         state: "offscreen"
 
         itemsModel: [
-             { 'text': qsTr("Linux Embedded") },
+             { 'text': qsTr("Embedded Linux") },
              { 'text': qsTr("Windows Embedded") },
              { 'text': qsTr("BlackBerry 10") },
              { 'text': qsTr("iOS*") },
@@ -102,7 +102,7 @@ BaseSlide {
     Text {
         id: text
         font.pointSize: 18
-        text: qsTr("In aggiunta esistono porting ufficiali per alcuni sistemi operativi Real-Time come QNX o VxWorks ed altri porting mantenuti invece dalla comunità.")
+        text: qsTr("In addition there are official ports for real time operating systems like QNX or VxWorks while other ports are mantained by the community.")
         color: slide.textColor
         anchors.top: parent.top
         anchors.topMargin: 550
