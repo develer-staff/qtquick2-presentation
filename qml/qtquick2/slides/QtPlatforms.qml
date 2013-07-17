@@ -31,7 +31,7 @@ BaseSlide {
         anchors.top: parent.top
         anchors.topMargin: 250
         anchors.left: parent.left
-        anchors.leftMargin: 100
+        anchors.leftMargin: (slide.width / 2 - width) * .66
 
         title: qsTr("Desktop")
 
@@ -74,7 +74,7 @@ BaseSlide {
         anchors.top: parent.top
         anchors.topMargin: 250
         anchors.right: parent.right
-        anchors.rightMargin: 100
+        anchors.rightMargin: (slide.width / 2 - width) * .66
 
         title: qsTr("Embedded")
         state: "offscreen"
