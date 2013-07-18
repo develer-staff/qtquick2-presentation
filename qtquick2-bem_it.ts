@@ -513,7 +513,8 @@
     </message>
     <message>
         <location filename="qml/qtquick2/PageContainer.qml" line="611"/>
-        <source>Because QtQuick was originally designed for embedded platforms, having standard controls was not a must have feature.</source>
+        <source>Because QtQuick was designed for embedded platforms, having standard controls was not a must have feature.</source>
+        <oldsource>Because QtQuick was originally designed for embedded platforms, having standard controls was not a must have feature.</oldsource>
         <translation>Poiché QtQuick è stato ideato per embedded, avere un set di controlli standard non era molto importante.</translation>
     </message>
     <message>
@@ -648,7 +649,7 @@
 <context>
     <name>UsersSlide</name>
     <message>
-        <location filename="qml/qtquick2/slides/UsersSlide.qml" line="6"/>
+        <location filename="qml/qtquick2/slides/UsersSlide.qml" line="7"/>
         <source>Qt: users</source>
         <translation>Qt: chi lo usa</translation>
     </message>

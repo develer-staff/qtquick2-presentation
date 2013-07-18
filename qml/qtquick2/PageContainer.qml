@@ -608,7 +608,7 @@ Item {
             title: qsTr("Controls")
             model: [
                 {
-                    'text': qsTr("Because QtQuick was originally designed for embedded platforms, having standard controls was not a must have feature."),
+                    'text': qsTr("Because QtQuick was designed for embedded platforms, having standard controls was not a must have feature."),
                     'indentLevel': 0,
                     'showDot': false
                 },
