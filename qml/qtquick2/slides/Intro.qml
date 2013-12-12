@@ -73,15 +73,14 @@ EmptySlide {
             anchors.topMargin: 10
             color: slide.disabledColor
             font.pointSize: 16
-            text: "[https://github.com/gvaldambrini/qtquick2-bem]"
+            text: "[https://github.com/develersrl/qtquick2-bem]"
         }
 
         Text {
             id: talkDate
             color: slide.disabledColor
             font.pointSize: 20
-            text: qsTr("Firenze, 8 Luglio 2013")
-
+            text: qsTr("Firenze, ") + Qt.formatDate(new Date(), "dd/MM/yyyy")
             anchors.bottom: parent.bottom
         }
     }

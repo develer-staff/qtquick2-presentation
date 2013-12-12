@@ -55,7 +55,7 @@ BaseSlide {
         Video {
             id: video
             anchors.fill: parent
-            source: "../rollin_safari.flv"
+            source: "../rollin_safari.mp4"
             autoLoad: true
         }
 

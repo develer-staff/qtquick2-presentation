@@ -65,13 +65,13 @@ Item {
         anchors.fill: parent
 
         function next() {
-            root.forceActiveFocus() // restore the root item keyboard focus (maybe stoled from a child slide)
+            root.forceActiveFocus() // restore the root item keyboard focus (maybe stolen from a child slide)
             currentIndex += 1
             push({item: pageComponent, properties: {sourceComponent: pages[currentIndex]}})
         }
 
         function prev() {
-            root.forceActiveFocus() // restore the root item keyboard focus (maybe stoled from a child slide)
+            root.forceActiveFocus() // restore the root item keyboard focus (maybe stolen from a child slide)
             currentIndex -= 1
             pop()
         }
