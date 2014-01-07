@@ -73,7 +73,7 @@ EmptySlide {
             anchors.topMargin: 10
             color: slide.disabledColor
             font.pointSize: 16
-            text: "[https://github.com/develersrl/qtquick2-bem]"
+            text: "[https://github.com/develersrl/qtquick2-presentation]"
         }
 
         Text {
