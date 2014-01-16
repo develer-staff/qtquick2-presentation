@@ -45,11 +45,20 @@ BaseSlide {
                 color: slide.textColor
                 width: 5
                 height: 5
-                anchors.top: delegateText.top
-                anchors.topMargin: 10
+                // because Qml does not expose the FontMetrics, we have to use this trick
+                // to place the dot at the middle of the first row of text
+                anchors.verticalCenter: fakeText.verticalCenter
                 anchors.left: parent.left
                 anchors.leftMargin: delegateItem.indentLevel * delegateItem.indent
                 visible: delegateItem.showDot
+            }
+
+            Text {
+                id: fakeText
+                text: "A"
+                font.pointSize: delegateText.font.pointSize
+                visible: false
+                anchors.top: parent.top
             }
 
             Text {
