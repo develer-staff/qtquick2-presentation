@@ -57,7 +57,7 @@ EmptySlide {
                 },
 
                 {
-                    'text': qsTr("Qt Quick is today a great choice for Desktop and in a few days also for iOS/Android→ Qt Everywhere"),
+                    'text': qsTr("Qt Quick is a great choice for Desktop and mobile platforms → Qt Everywhere"),
                     'indentLevel': 0,
                     'showDot': true
                 }

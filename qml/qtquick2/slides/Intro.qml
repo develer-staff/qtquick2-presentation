@@ -62,7 +62,7 @@ EmptySlide {
             id: talkTitle
             color: slide.textColor
             font.pointSize: 24
-            text: qsTr("Qt Quick2: the evolution")
+            text: qsTr("Introducing Qt Quick")
             anchors.verticalCenter: parent.verticalCenter
             anchors.verticalCenterOffset: -10
         }

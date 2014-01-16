@@ -135,6 +135,11 @@ Item {
     }
 
     Component {
+        DigiaSlide {
+        }
+    }
+
+    Component {
         QtPlatforms {
         }
     }
@@ -398,12 +403,12 @@ Item {
                     'showDot': true
                 },
                 {
-                    'text': qsTr("Controls / Layouts"),
+                    'text': qsTr("Controls"),
                     'indentLevel': 0,
                     'showDot': true
                 },
                 {
-                    'text': qsTr("Sensors"),
+                    'text': qsTr("Layouts"),
                     'indentLevel': 0,
                     'showDot': true
                 }
@@ -674,10 +679,49 @@ Item {
 
     Component {
         TextSlide {
+            title: qsTr("Mobile APIs")
+            model: [
+                {
+                    'text': qsTr("New in Qt5, these modules access various hardware and mobile features and are available for Android, iOS and BlackBerry 10:"),
+                    'indentLevel': 0,
+                    'showDot': false
+                },
+                {
+                    'text': qsTr("Sensors"),
+                    'indentLevel': 1,
+                    'showDot': true
+                },
+                {
+                    'text': qsTr("Positioning"),
+                    'indentLevel': 1,
+                    'showDot': true
+                },
+                {
+                    'text': qsTr("Bluetooth"),
+                    'indentLevel': 1,
+                    'showDot': true
+                },
+                {
+                    'text': qsTr("NFC"),
+                    'indentLevel': 1,
+                    'showDot': true
+                },
+                {
+                    'text': qsTr("All these modules can be used from both Qt and Qt Quick applications."),
+                    'indentLevel': 0,
+                    'showDot': false
+                }
+
+            ]
+        }
+    }
+
+    Component {
+        TextSlide {
             title: qsTr("Sensors")
             model: [
                 {
-                    'text': qsTr("Successor of Qt Mobility, the Sensor module offers a simple way to access, from Qml and C++, to those hardware sensors so common on the modern mobile platforms."),
+                    'text': qsTr("Part of the old Qt Mobility project, the Sensors module offers a simple way to access those hardware sensors so common on the modern mobile platforms."),
                     'indentLevel': 0,
                     'showDot': false
                 },
@@ -706,8 +750,126 @@ Item {
     }
 
     Component {
+        TextSlide {
+            title: qsTr("Positioning")
+            model: [
+                {
+                    'text': qsTr("Part of the old Qt Mobility project, allows the application to track the location using:"),
+                    'indentLevel': 0,
+                    'showDot': false
+                },
+                {
+                    'text': qsTr("GPS"),
+                    'indentLevel': 1,
+                    'showDot': true
+                },
+                {
+                    'text': qsTr("Cell Id"),
+                    'indentLevel': 1,
+                    'showDot': true
+                },
+                {
+                    'text': qsTr("strings in the NMEA format"),
+                    'indentLevel': 1,
+                    'showDot': true
+                },
+                {
+                    'text': qsTr("Custom sources"),
+                    'indentLevel': 1,
+                    'showDot': true
+                }
+            ]
+        }
+    }
+
+    Component {
+        TextSlide {
+            title: qsTr("Bluetooth")
+            model: [
+                {
+                    'text': qsTr("The Bluetooth module allows you to:"),
+                    'indentLevel': 0,
+                    'showDot': false
+                },
+                {
+                    'text': qsTr("scan Bluetooth devices in range"),
+                    'indentLevel': 1,
+                    'showDot': true
+                },
+                {
+                    'text': qsTr("establish a connection (or serve as a server) using the RFCOMM protocol"),
+                    'indentLevel': 1,
+                    'showDot': true
+                },
+                {
+                    'text': qsTr("push files with the OBEX protocol"),
+                    'indentLevel': 1,
+                    'showDot': true
+                }
+
+            ]
+        }
+    }
+
+    Component {
+        TextSlide {
+            title: qsTr("NFC")
+            model: [
+                {
+                    'text': qsTr("The NFC module can:"),
+                    'indentLevel': 0,
+                    'showDot': false
+                },
+                {
+                    'text': qsTr("detect NFC tags entering and leaving the communication range"),
+                    'indentLevel': 1,
+                    'showDot': true
+                },
+                {
+                    'text': qsTr("read and write NDEF messages"),
+                    'indentLevel': 1,
+                    'showDot': true
+                },
+                {
+                    'text': qsTr("register an NDEF message handler for a particular content type"),
+                    'indentLevel': 1,
+                    'showDot': true
+                }
+            ]
+        }
+    }
+
+    Component {
         BrowserSlide {
 
+        }
+    }
+
+    Component {
+        TextSlide {
+            title: qsTr("Testing Qt Quick applications")
+            model: [
+                {
+                    'text': qsTr("Testing user interfaces is inherently difficult. For Qt Quick there are some options:"),
+                    'indentLevel': 0,
+                    'showDot': false
+                },
+                {
+                    'text': qsTr("Qt Quick offers some facilities to write unit test of components"),
+                    'indentLevel': 1,
+                    'showDot': true
+                },
+                {
+                    'text': qsTr("Autopilot is an open source solution which allows you to write tests in Python for the whole application."),
+                    'indentLevel': 1,
+                    'showDot': true
+                },
+                {
+                    'text': qsTr("Squish is a commercial product which has a wide userbase and offers many functionalities to test Qt Applications."),
+                    'indentLevel': 1,
+                    'showDot': true
+                }
+            ]
         }
     }
 

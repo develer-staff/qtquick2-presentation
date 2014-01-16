@@ -83,8 +83,8 @@ BaseSlide {
              { 'text': qsTr("Embedded Linux") },
              { 'text': qsTr("Windows Embedded") },
              { 'text': qsTr("BlackBerry 10") },
-             { 'text': qsTr("iOS*") },
-             { 'text': qsTr("Android*") },
+             { 'text': qsTr("iOS") },
+             { 'text': qsTr("Android") },
              { 'text': qsTr("Windows 8*") }
         ]
 
