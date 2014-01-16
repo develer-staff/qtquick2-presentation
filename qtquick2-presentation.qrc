@@ -1,6 +1,6 @@
 <RCC>
     <qresource prefix="/common">
         <file>Granat-Regular.otf</file>
-        <file>qtquick2-bem_it.qm</file>
+        <file>qtquick2-presentation_it.qm</file>
     </qresource>
 </RCC>

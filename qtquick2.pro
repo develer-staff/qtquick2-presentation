@@ -22,13 +22,13 @@ include(qtquick2applicationviewer/qtquick2applicationviewer.pri)
 qtcAddDeployment()
 
 RESOURCES += \
-    qtquick2-bem.qrc
+    qtquick2-presentation.qrc
 
 lupdate_only {
     SOURCES = qml/qtquick2/*.qml \
         qml/qtquick2/slides/*.qml
 }
 
-TRANSLATIONS += qtquick2-bem_it.ts
+TRANSLATIONS += qtquick2-presentation_it.ts
 
 

@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
         if (arg.startsWith("--language")) {
             QString lang = arg.split("=").at(1).trimmed();
             QTranslator *translator = new QTranslator(&app);
-            if (!translator->load(":/common/qtquick2-bem_" + lang + ".qm"))
+            if (!translator->load(":/common/qtquick2-presentation_" + lang + ".qm"))
                 qDebug() << "Unable to load translation file for language:" << lang;
 
             app.installTranslator(translator);
