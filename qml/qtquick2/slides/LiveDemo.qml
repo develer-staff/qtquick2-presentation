@@ -19,7 +19,7 @@ BaseSlide {
 import QtQuick 2.1
 
 Image {
-    source: '../images/better-logo.png'
+    source: '../images/develer-logo-small.png'
     MouseArea {
         anchors.fill: parent
         drag {
